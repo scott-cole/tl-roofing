@@ -168,7 +168,7 @@ export default function Home() {
         limit={6}
       />
 
-      <div className="text-center bg-[#292929] pb-16 -mt-8">
+      <div className="text-center bg-[#333333] py-16">
         <Link
           href="/gallery"
           className="btn-primary inline-flex items-center gap-2"
@@ -220,7 +220,7 @@ export default function Home() {
 
             <div className="text-center mt-12">
               <p className="text-gray-400 mb-6">
-                Don't see your area? Contact us to check availability.
+                Don&rsquo;t see your area? Contact us to check availability.
               </p>
               <Link href="/contact" className="btn-primary inline-block">
                 Check Your Area
@@ -236,7 +236,7 @@ export default function Home() {
             Ready to Get Started?
           </h2>
           <p className="text-xl mb-10 text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Contact T & L Roofing today for a free, no-obligation quote. We're
+            Contact T &amp; L Roofing today for a free, no-obligation quote. We&rsquo;re
             here to help with all your roofing needs in Leeds and West
             Yorkshire.
           </p>

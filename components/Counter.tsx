@@ -18,14 +18,11 @@ export default function Counter({
   const ref = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    if (animateOnMount && !hasAnimated) {
-      setHasAnimated(true);
-      return;
-    }
+    if (animateOnMount || hasAnimated) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting && !hasAnimated) {
+        if (entries[0].isIntersecting) {
           setHasAnimated(true);
         }
       },

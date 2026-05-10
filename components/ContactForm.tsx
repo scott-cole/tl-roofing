@@ -11,12 +11,12 @@ export default function ContactForm() {
     phone: "",
     message: "",
   });
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Thank you for your message! We'll get back to you soon.");
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    setSubmitted(true);
+    setTimeout(() => setSubmitted(false), 5000);
   };
 
   const handleChange = (
@@ -40,7 +40,7 @@ export default function ContactForm() {
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="space-y-8 flex-1">
               <div className="flex items-start space-x-8">
-                <div className="w-20 h-20 bg-[#1E97D4]/10 rounded-xl flex items-center justify-center shrink-0">
+                <div className="w-16 h-16 bg-[#1E97D4]/10 rounded-xl flex items-center justify-center flex-shrink-0">
                   <Phone className="w-8 h-8 text-[#1E97D4]" />
                 </div>
                 <div className="flex flex-col">
@@ -134,7 +134,21 @@ export default function ContactForm() {
               <h3 className="text-3xl font-bold text-white mb-10">
                 Send Us a Message
               </h3>
-              <form onSubmit={handleSubmit} className="space-y-8">
+              {submitted ? (
+                <div className="flex flex-col items-center justify-center py-16 text-center">
+                  <div className="w-20 h-20 bg-[#1E97D4]/10 rounded-full flex items-center justify-center mb-6">
+                    <CheckCircle className="w-10 h-10 text-[#1E97D4]" />
+                  </div>
+                  <h4 className="text-2xl font-bold text-white mb-3">
+                    Message Sent!
+                  </h4>
+                  <p className="text-gray-400 text-lg max-w-md">
+                    Thank you for reaching out. We&rsquo;ll get back to you within 24
+                    hours.
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-8">
                 <FloatingLabelInput
                   id="name"
                   name="name"
@@ -182,6 +196,7 @@ export default function ContactForm() {
                   <span>Send Message</span>
                 </button>
               </form>
+              )}
             </div>
           </div>
         </div>

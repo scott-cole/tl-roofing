@@ -32,7 +32,7 @@ export default function Hero() {
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-[#292929]/80 via-[#292929]/85 to-[#292929]/90"></div>
 
-      <div className="container relative z-10 px-4 sm:px-6">
+      <div className="container relative z-10">
         <div className="flex flex-col items-center">
           <div className="relative w-[200px] h-[200px] sm:w-[280px] sm:h-[280px] md:w-[350px] md:h-[350px] mx-auto -mb-8 sm:-mb-12 md:-mb-20">
             <Image

@@ -1,11 +1,25 @@
 "use client";
 
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scrollTo = (index: number) => {
+    if (!scrollRef.current) return;
+    const container = scrollRef.current;
+    const cards = container.children;
+    if (cards[index]) {
+      (cards[index] as HTMLElement).scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "start",
+      });
+    }
+  };
 
   useEffect(() => {
     const checkMobile = () => {
@@ -50,38 +64,12 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="relative mb-16">
-          {isMobile && (
-            <>
-              <button
-                onClick={() =>
-                  setCurrentIndex((prev) =>
-                    prev === 0 ? reviews.length - 1 : prev - 1
-                  )
-                }
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-[#1E97D4] hover:bg-[#0d7ab8] text-white p-2 rounded-full shadow-lg transition-all hover:scale-110"
-                aria-label="Previous review"
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
-              <button
-                onClick={() =>
-                  setCurrentIndex((prev) =>
-                    prev === reviews.length - 1 ? 0 : prev + 1
-                  )
-                }
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-[#1E97D4] hover:bg-[#0d7ab8] text-white p-2 rounded-full shadow-lg transition-all hover:scale-110"
-                aria-label="Next review"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
-            </>
-          )}
-
+        <div className="mb-16">
           <div
+            ref={scrollRef}
             className={`${
               isMobile
-                ? "flex overflow-x-auto snap-x snap-mandatory gap-6 scroll-smooth"
+                ? "flex overflow-x-auto snap-x snap-mandatory gap-4 scroll-smooth snap-start"
                 : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             }`}
           >
@@ -89,9 +77,7 @@ export default function Testimonials() {
               <div
                 key={index}
                 className={`bg-[#404040] rounded-2xl shadow-lg p-8 relative card-hover border border-[#4a4a4a] ${
-                  isMobile
-                    ? "min-w-[300px] snap-center flex-shrink-0"
-                    : ""
+                  isMobile ? "w-[70vw] snap-start flex-shrink-0" : ""
                 }`}
               >
                 <Quote className="absolute top-6 right-6 w-10 h-10 text-[#1E97D4]/20" />
@@ -104,7 +90,7 @@ export default function Testimonials() {
                   ))}
                 </div>
                 <p className="text-gray-300 mb-8 italic leading-relaxed">
-                  "{review.text}"
+                  &ldquo;{review.text}&rdquo;
                 </p>
                 <div className="flex items-center justify-between pt-6 border-t border-[#4a4a4a]">
                   <div>
@@ -118,57 +104,55 @@ export default function Testimonials() {
           </div>
 
           {isMobile && (
-            <div className="flex justify-center gap-2 mt-6">
-              {reviews.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    currentIndex === index
-                      ? "bg-[#1E97D4] w-6"
-                      : "bg-gray-600"
-                  }`}
-                  aria-label={`Go to review ${index + 1}`}
-                />
-              ))}
+            <div className="flex items-center justify-center gap-4 mt-6">
+              <button
+                onClick={() =>
+                  setCurrentIndex((prev) => {
+                    const next = prev === 0 ? reviews.length - 1 : prev - 1;
+                    scrollTo(next);
+                    return next;
+                  })
+                }
+                className="bg-[#1E97D4] hover:bg-[#0d7ab8] text-white p-2 rounded-full shadow-lg transition-all hover:scale-110"
+                aria-label="Previous review"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+
+              <div className="flex items-center gap-2">
+                {reviews.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => {
+                      setCurrentIndex(index);
+                      scrollTo(index);
+                    }}
+                    className={`h-2 rounded-full transition-all ${
+                      currentIndex === index
+                        ? "bg-[#1E97D4] w-6"
+                        : "bg-gray-600 w-2"
+                    }`}
+                    aria-label={`Go to review ${index + 1}`}
+                  />
+                ))}
+              </div>
+
+              <button
+                onClick={() =>
+                  setCurrentIndex((prev) => {
+                    const next =
+                      prev === reviews.length - 1 ? 0 : prev + 1;
+                    scrollTo(next);
+                    return next;
+                  })
+                }
+                className="bg-[#1E97D4] hover:bg-[#0d7ab8] text-white p-2 rounded-full shadow-lg transition-all hover:scale-110"
+                aria-label="Next review"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
             </div>
           )}
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <div className="bg-[#404040] rounded-2xl shadow-lg p-16 text-center card-hover border-2 border-[#1E97D4] flex-1 min-w-[300px]">
-            <div className="text-6xl mb-6">⭐</div>
-            <h3 className="text-3xl font-bold text-white mb-4">5-Star Rated</h3>
-            <p className="text-gray-400 mb-10 text-xl leading-relaxed">
-              Highly rated roofing company in Leeds on Google Reviews
-            </p>
-            <div className="flex items-center justify-center space-x-1 mb-6">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className="w-9 h-9 fill-[#1E97D4] text-[#1E97D4]"
-                />
-              ))}
-            </div>
-            <p className="text-sm text-gray-500">Based on customer reviews</p>
-          </div>
-
-          <div className="bg-[#404040] rounded-2xl shadow-lg p-16 text-center card-hover border-2 border-[#1E97D4] flex-1 min-w-[300px]">
-            <div className="text-6xl mb-6">✓</div>
-            <h3 className="text-3xl font-bold text-white mb-4">Excellent</h3>
-            <p className="text-gray-400 mb-10 text-xl leading-relaxed">
-              Top-rated on Trustpilot for roofing services in West Yorkshire
-            </p>
-            <div className="flex items-center justify-center space-x-1 mb-6">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className="w-9 h-9 fill-[#1E97D4] text-[#1E97D4]"
-                />
-              ))}
-            </div>
-            <p className="text-sm text-gray-500">Trustpilot Excellent Rating</p>
-          </div>
         </div>
       </div>
     </section>

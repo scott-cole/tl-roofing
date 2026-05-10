@@ -6,10 +6,6 @@ import {
   Mail,
   Phone,
   MapPin,
-  Star,
-  Shield,
-  Award,
-  CheckCircle,
 } from "lucide-react";
 
 export default function Footer() {

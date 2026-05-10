@@ -1,37 +1,74 @@
 "use client";
 
-import { forwardRef, useState } from "react";
+import { useState, type KeyboardEvent } from "react";
 
-interface FloatingLabelInputProps
-  extends React.InputHTMLAttributes<HTMLInputElement | HTMLTextAreaElement> {
+interface FloatingLabelInputProps {
+  id: string;
+  name: string;
   label: string;
+  type?: string;
+  value: string;
+  className?: string;
+  onChange: (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => void;
+  onFocus?: (
+    e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => void;
+  onBlur?: (
+    e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => void;
+  required?: boolean;
   isTextArea?: boolean;
 }
 
-const FloatingLabelInput = forwardRef<
-  HTMLInputElement | HTMLTextAreaElement,
-  FloatingLabelInputProps
->(({ label, isTextArea = false, className = "", ...props }, ref) => {
-  const [isFocused, setIsFocused] = useState(!!props.value);
-  const [hasValue, setHasValue] = useState(!!props.value);
+export default function FloatingLabelInput({
+  label,
+  isTextArea = false,
+  className = "",
+  id,
+  name,
+  type = "text",
+  value,
+  required,
+  onChange,
+  onFocus,
+  onBlur,
+}: FloatingLabelInputProps) {
+  const [isFocused, setIsFocused] = useState(false);
+  const [hasValue, setHasValue] = useState(false);
 
-  const handleFocus = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const isFloating = isFocused || hasValue || value.length > 0;
+
+  const handleFocus = (
+    e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setIsFocused(true);
-    if (props.onFocus) props.onFocus(e);
+    onFocus?.(e);
   };
 
-  const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleBlur = (
+    e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setIsFocused(false);
-    if (props.onBlur) props.onBlur(e);
+    onBlur?.(e);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setHasValue(e.target.value.length > 0);
-    if (props.onChange) props.onChange(e);
+    onChange(e);
+  };
+
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (e.key === "Enter" && !isTextArea) {
+      (e.target as HTMLInputElement).form?.requestSubmit();
+    }
   };
 
   const labelClass = `absolute left-4 transition-all duration-200 pointer-events-none ${
-    isFocused || hasValue
+    isFloating
       ? "-top-3 left-3 text-xs bg-[#292929] px-2 text-[#1E97D4]"
       : "top-4 text-gray-400 text-base"
   }`;
@@ -44,14 +81,18 @@ const FloatingLabelInput = forwardRef<
     return (
       <div className="relative">
         <textarea
-          ref={ref as React.RefObject<HTMLTextAreaElement>}
-          {...(props as React.TextareaHTMLAttributes<HTMLTextAreaElement>)}
-          className={`${inputClass} resize-none`}
+          id={id}
+          name={name}
+          value={value}
+          required={required}
+          className={`${inputClass} resize-none min-h-[120px]`}
           onFocus={handleFocus}
           onBlur={handleBlur}
           onChange={handleChange}
         />
-        <label className={labelClass}>{label}</label>
+        <label className={labelClass} htmlFor={id}>
+          {label}
+        </label>
       </div>
     );
   }
@@ -59,18 +100,20 @@ const FloatingLabelInput = forwardRef<
   return (
     <div className="relative">
       <input
-        ref={ref as React.RefObject<HTMLInputElement>}
-        {...(props as React.InputHTMLAttributes<HTMLInputElement>)}
+        id={id}
+        name={name}
+        type={type}
+        value={value}
+        required={required}
         className={inputClass}
         onFocus={handleFocus}
         onBlur={handleBlur}
         onChange={handleChange}
+        onKeyDown={handleKeyDown}
       />
-      <label className={labelClass}>{label}</label>
+      <label className={labelClass} htmlFor={id}>
+        {label}
+      </label>
     </div>
   );
-});
-
-FloatingLabelInput.displayName = "FloatingLabelInput";
-
-export default FloatingLabelInput;
+}
