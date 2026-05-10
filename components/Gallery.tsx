@@ -97,58 +97,65 @@ export default function Gallery({
 
       {selectedIndex !== null && (
         <div
-          className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-sm flex items-center justify-center"
+          className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-sm"
           onClick={closeLightbox}
         >
+          <div
+            className="flex items-center justify-center w-full h-full p-4 md:p-8 pb-20 md:pb-24"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="relative w-full h-full max-w-[95vw] max-h-[80vh]">
+              <Image
+                src={images[selectedIndex]}
+                alt={`Roofing project ${selectedIndex + 1}`}
+                fill
+                className="object-contain"
+                priority
+                sizes="95vw"
+              />
+            </div>
+          </div>
+
+          <div
+            className="absolute bottom-0 left-0 right-0 flex items-center justify-center gap-6 md:gap-10 pb-6 pt-4 z-40"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                goToPrev();
+              }}
+              className="p-2 md:p-3 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-300 hover:scale-110"
+              aria-label="Previous image"
+            >
+              <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-white" />
+            </button>
+
+            <span className="text-white/80 font-medium text-sm md:text-base tabular-nums">
+              {selectedIndex + 1} / {images.length}
+            </span>
+
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                goToNext();
+              }}
+              className="p-2 md:p-3 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-300 hover:scale-110"
+              aria-label="Next image"
+            >
+              <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-white" />
+            </button>
+          </div>
+
           <button
             onClick={closeLightbox}
-            className="absolute top-4 right-4 z-10 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-300 hover:scale-110"
+            style={{ position: "fixed", top: 16, right: 16, zIndex: 9999 }}
+            className="flex items-center gap-2 px-4 py-3 bg-black/80 hover:bg-white/20 rounded-full transition-all duration-300 hover:scale-110 shadow-lg border-2 border-white/60"
             aria-label="Close lightbox"
           >
             <X className="w-6 h-6 text-white" />
+            <span className="text-white text-sm font-semibold">Close</span>
           </button>
-
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              goToPrev();
-            }}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-300 hover:scale-110"
-            aria-label="Previous image"
-          >
-            <ChevronLeft className="w-8 h-8 text-white" />
-          </button>
-
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              goToNext();
-            }}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-300 hover:scale-110"
-            aria-label="Next image"
-          >
-            <ChevronRight className="w-8 h-8 text-white" />
-          </button>
-
-          <div
-            className="relative w-full h-full max-w-[90vw] max-h-[85vh] m-4"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <Image
-              src={images[selectedIndex]}
-              alt={`Roofing project ${selectedIndex + 1}`}
-              fill
-              className="object-contain"
-              priority
-              sizes="90vw"
-            />
-          </div>
-
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur-md px-5 py-2.5 rounded-full">
-            <span className="text-white font-medium text-sm">
-              {selectedIndex + 1} / {images.length}
-            </span>
-          </div>
         </div>
       )}
     </>
