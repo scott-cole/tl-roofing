@@ -172,7 +172,6 @@ export default function ContactForm() {
                   value={formData.message}
                   onChange={handleChange}
                   isTextArea
-                  rows={6}
                 />
 
                 <button
