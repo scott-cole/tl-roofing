@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -7,9 +9,22 @@ import {
   Award,
   CheckCircle,
   Phone,
+  ChevronDown,
 } from "lucide-react";
+import { useEffect, useState } from "react";
+import Counter from "./Counter";
 
 export default function Hero() {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <section className="relative bg-[#292929] text-white overflow-hidden pb-20 md:pb-28 -mt-25">
       <div className="absolute inset-0">
@@ -18,10 +33,11 @@ export default function Hero() {
           alt="Professional roofing work"
           fill
           className="object-cover opacity-10"
+          style={{ transform: `translateY(${scrollY * 0.3}px)` }}
           priority
         />
       </div>
-      <div className="absolute inset-0 bg-linear-to-br from-[#292929]/85 via-[#292929]/80 to-[#292929]/75"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#292929]/85 via-[#292929]/80 to-[#292929]/75 animate-gradient"></div>
       <div className="container relative z-10">
         <div className="flex flex-col items-center">
           <div className="relative w-[420px] h-[420px]">
@@ -69,7 +85,7 @@ export default function Hero() {
           <div className="flex flex-wrap justify-center gap-12 md:gap-20 max-w-4xl mx-auto pt-12 border-t border-[#404040]">
             <div className="flex flex-col items-center">
               <div className="text-4xl md:text-5xl font-bold text-[#1E97D4] mb-3">
-                15+
+                <Counter end={15} suffix="+" />
               </div>
               <div className="text-sm text-gray-400 uppercase tracking-wide">
                 Years Experience
@@ -77,7 +93,7 @@ export default function Hero() {
             </div>
             <div className="flex flex-col items-center">
               <div className="text-4xl md:text-5xl font-bold text-[#1E97D4] mb-3">
-                500+
+                <Counter end={500} suffix="+" />
               </div>
               <div className="text-sm text-gray-400 uppercase tracking-wide">
                 Projects Done
@@ -85,13 +101,23 @@ export default function Hero() {
             </div>
             <div className="flex flex-col items-center">
               <div className="text-4xl md:text-5xl font-bold text-[#1E97D4] mb-3">
-                100%
+                <Counter end={100} suffix="%" />
               </div>
               <div className="text-sm text-gray-400 uppercase tracking-wide">
                 Satisfaction
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <a
+            href="#services"
+            className="text-[#1E97D4] hover:text-white transition-colors"
+            aria-label="Scroll down"
+          >
+            <ChevronDown className="w-8 h-8" />
+          </a>
         </div>
       </div>
     </section>

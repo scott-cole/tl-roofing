@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     "Complete roofing services in Leeds and West Yorkshire. Expert roof repairs, replacements, installations, gutters, inspections, and 24/7 emergency services.",
   keywords:
     "roofing services Leeds, roof repairs, roof replacement, roof installation, gutter services, roof inspections, emergency roofing",
+  alternates: {
+    canonical: "https://tlroofing.co.uk/services",
+  },
 };
 
 export default function ServicesPage() {

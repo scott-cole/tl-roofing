@@ -2,20 +2,15 @@ import Hero from "@/components/Hero";
 import ServiceCard from "@/components/ServiceCard";
 import Testimonials from "@/components/Testimonials";
 import ContactForm from "@/components/ContactForm";
-import Link from "next/link";
-import {
-  Wrench,
-  House,
-  Hammer,
-  Droplets,
-  ClipboardCheck,
-  AlertTriangle,
-  ArrowRight,
-  CheckCircle,
-  Shield,
-  Award,
-  Clock,
-} from "lucide-react";
+import ScrollReveal from "@/components/ScrollReveal";
+import { MapPin } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://tlroofing.co.uk",
+  },
+};
 
 export default function Home() {
   const services = [
@@ -152,6 +147,55 @@ export default function Home() {
 
       <Testimonials />
       <ContactForm />
+
+      <ScrollReveal>
+        <section className="py-20 md:py-28 bg-[#333333]">
+          <div className="container">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+                Areas We Serve
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Proudly serving Leeds and the surrounding West Yorkshire area
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+              {[
+                "Leeds City Centre",
+                "Headingley",
+                "Chapel Allerton",
+                "Horsforth",
+                "Roundhay",
+                "Otley",
+                "Pudsey",
+                "Guiseley",
+                "Morley",
+                "Batley",
+                "Dewsbury",
+                "Wakefield",
+              ].map((area, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-3 bg-[#404040] p-4 rounded-xl border border-[#4a4a4a] hover:border-[#1E97D4] transition-all duration-300 hover:shadow-lg hover:shadow-[#1E97D4]/10 hover:-translate-y-1"
+                >
+                  <MapPin className="w-5 h-5 text-[#1E97D4] flex-shrink-0" />
+                  <span className="text-white font-medium">{area}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <p className="text-gray-400 mb-6">
+                Don't see your area? Contact us to check availability.
+              </p>
+              <Link href="/contact" className="btn-primary inline-block">
+                Check Your Area
+              </Link>
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
 
       <section className="py-20 md:py-28 bg-[#404040] text-center">
         <div className="container">

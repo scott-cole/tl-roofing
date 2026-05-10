@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -8,6 +8,15 @@ import Image from "next/image";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -17,7 +26,14 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-[#292929] shadow-xl border-b border-[#404040]">
+    <header
+      className={cn(
+        "sticky top-0 z-50 bg-[#292929] border-b border-[#404040] transition-all duration-300",
+        isScrolled
+          ? "shadow-xl backdrop-blur-md bg-[#292929]/95"
+          : "shadow-lg"
+      )}
+    >
       <nav className="container py-2">
         <div className="flex items-center justify-between gap-8">
           <Link href="/" className="flex items-center shrink-0 group gap-2">
@@ -38,10 +54,10 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-white hover:text-[#1E97D4] transition-colors font-semibold text-sm uppercase tracking-wide relative group py-2 px-3 whitespace-nowrap"
+                className="text-white hover:text-[#1E97D4] transition-all duration-300 font-semibold text-sm uppercase tracking-wide relative group py-2 px-3 whitespace-nowrap"
               >
                 {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1E97D4] transition-all group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1E97D4] transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
           </div>

@@ -4,6 +4,9 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SchemaMarkup from "@/components/SchemaMarkup";
+import ReviewSchema from "@/components/ReviewSchema";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import BackToTop from "@/components/BackToTop";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -80,12 +83,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-GB" className={`${inter.variable} antialiased`}>
+    <html lang="en-GB" className={`${inter.variable} antialiased scroll-smooth`}>
       <body className="min-h-screen flex flex-col">
         <SchemaMarkup />
+        <ReviewSchema />
+        <BreadcrumbSchema
+          items={[
+            { name: "Home", url: "https://tlroofing.co.uk" },
+          ]}
+        />
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
+        <BackToTop />
       </body>
     </html>
   );

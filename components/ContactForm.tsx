@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import FloatingLabelInput from "./FloatingLabelInput";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -134,80 +135,45 @@ export default function ContactForm() {
                 Send Us a Message
               </h3>
               <form onSubmit={handleSubmit} className="space-y-8">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-semibold text-gray-300 mb-4"
-                  >
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-6 py-4 bg-[#292929] border border-[#404040] rounded-xl focus:ring-2 focus:ring-[#1E97D4] focus:border-transparent transition-all text-white placeholder-gray-500"
-                    placeholder="Your name"
-                  />
-                </div>
+                <FloatingLabelInput
+                  id="name"
+                  name="name"
+                  type="text"
+                  label="Full Name *"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                />
 
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-semibold text-gray-300 mb-4"
-                  >
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-6 py-4 bg-[#292929] border border-[#404040] rounded-xl focus:ring-2 focus:ring-[#1E97D4] focus:border-transparent transition-all text-white placeholder-gray-500"
-                    placeholder="your@email.com"
-                  />
-                </div>
+                <FloatingLabelInput
+                  id="email"
+                  name="email"
+                  type="email"
+                  label="Email Address *"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                />
 
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-sm font-semibold text-gray-300 mb-4"
-                  >
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-6 py-4 bg-[#292929] border border-[#404040] rounded-xl focus:ring-2 focus:ring-[#1E97D4] focus:border-transparent transition-all text-white placeholder-gray-500"
-                    placeholder="07700 900000"
-                  />
-                </div>
+                <FloatingLabelInput
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  label="Phone Number"
+                  value={formData.phone}
+                  onChange={handleChange}
+                />
 
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-semibold text-gray-300 mb-4"
-                  >
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={6}
-                    className="w-full px-6 py-4 bg-[#292929] border border-[#404040] rounded-xl focus:ring-2 focus:ring-[#1E97D4] focus:border-transparent transition-all resize-none text-white placeholder-gray-500"
-                    placeholder="Tell us about your roofing needs..."
-                  />
-                </div>
+                <FloatingLabelInput
+                  id="message"
+                  name="message"
+                  label="Message *"
+                  required
+                  value={formData.message}
+                  onChange={handleChange}
+                  isTextArea
+                  rows={6}
+                />
 
                 <button
                   type="submit"

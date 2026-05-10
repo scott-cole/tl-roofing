@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     "Learn about T & L Roofing, your trusted roofing experts in Leeds and West Yorkshire. Quality workmanship, reliable service, and customer satisfaction guaranteed.",
   keywords:
     "T & L Roofing, about us, roofing company Leeds, professional roofers",
+  alternates: {
+    canonical: "https://tlroofing.co.uk/about",
+  },
 };
 
 export default function AboutPage() {

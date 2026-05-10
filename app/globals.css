@@ -121,3 +121,222 @@ section {
 .section-subtitle {
   @apply text-xl text-gray-400 max-w-3xl mx-auto;
 }
+
+/* Scroll Reveal Animations */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Gradient Animation */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+}
+
+/* Glow Effect */
+.glow-on-hover:hover {
+  box-shadow: 0 0 20px rgba(30, 151, 212, 0.5);
+  transform: translateY(-2px);
+}
+
+/* 3D Tilt Effect */
+.tilt-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.tilt-card:hover {
+  transform: perspective(1000px) rotateX(5deg) rotateY(5deg) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Shimmer Effect */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #292929;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E97D4;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0d7ab8;
+}
+
+/* Geometric Patterns */
+.geometric-pattern {
+  background-image:
+    linear-gradient(30deg, #404040 12%, transparent 12.5%, transparent 87%, #404040 87.5%, #404040),
+    linear-gradient(150deg, #404040 12%, transparent 12.5%, transparent 87%, #404040 87.5%, #404040),
+    linear-gradient(30deg, #404040 12%, transparent 12.5%, transparent 87%, #404040 87.5%, #404040),
+    linear-gradient(150deg, #404040 12%, transparent 12.5%, transparent 87%, #404040 87.5%, #404040),
+    linear-gradient(60deg, #4a4a4a77 25%, transparent 25.5%, transparent 75%, #4a4a4a77 75%, #4a4a4a77),
+    linear-gradient(60deg, #4a4a4a77 25%, transparent 25.5%, transparent 75%, #4a4a4a77 75%, #4a4a4a77);
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+}
+
+.dot-pattern {
+  background-image: radial-gradient(#404040 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Micro-interactions */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-brighten {
+  transition: filter 0.3s ease;
+}
+
+.hover-brighten:hover {
+  filter: brightness(1.1);
+}
+
+/* Button micro-interactions */
+button,
+a.btn-primary,
+a.btn-secondary,
+a.btn-outline {
+  position: relative;
+  overflow: hidden;
+}
+
+button::after,
+a.btn-primary::after,
+a.btn-secondary::after,
+a.btn-outline::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+button:active::after,
+a.btn-primary:active::after,
+a.btn-secondary:active::after,
+a.btn-outline:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Focus visible styles for accessibility */
+*:focus-visible {
+  outline: 2px solid #1E97D4;
+  outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+  background: #1E97D4;
+  color: white;
+}
