@@ -3,7 +3,20 @@ import ServiceCard from "@/components/ServiceCard";
 import Testimonials from "@/components/Testimonials";
 import ContactForm from "@/components/ContactForm";
 import ScrollReveal from "@/components/ScrollReveal";
-import { MapPin } from "lucide-react";
+import {
+  Wrench,
+  House,
+  Hammer,
+  Droplets,
+  ClipboardCheck,
+  AlertTriangle,
+  ArrowRight,
+  CheckCircle,
+  Shield,
+  Award,
+  Clock,
+  MapPin,
+} from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
