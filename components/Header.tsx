@@ -101,13 +101,23 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            <a
-              href="tel:01130000000"
-              className="flex items-center gap-2 text-white font-semibold text-base py-3 px-4"
-            >
-              <Phone className="w-5 h-5 text-[#1E97D4]" />
-              <span>0113 000 0000</span>
-            </a>
+            <div className="ml-4 flex items-center gap-2">
+              <Phone className="w-5 h-5" />
+              <div className="flex flex-col text-xs">
+                <a
+                  href="tel:07936450711"
+                  className="text-white hover:text-[#1E97D4] transition-colors font-semibold text-sm"
+                >
+                  07936 450711
+                </a>
+                <a
+                  href="tel:07791746045"
+                  className="text-white hover:text-[#1E97D4] transition-colors font-semibold text-sm"
+                >
+                  07791 746045
+                </a>
+              </div>
+            </div>
             <Link
               href="/contact"
               className="bg-[#1E97D4] hover:bg-[#0d7ab8] text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 text-center mx-4 mt-2"
