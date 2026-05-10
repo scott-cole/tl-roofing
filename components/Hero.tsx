@@ -11,7 +11,7 @@ import {
 
 export default function Hero() {
   return (
-    <section className="relative bg-[#292929] text-white overflow-hidden pb-20 md:pb-28 -mt-[100px]">
+    <section className="relative bg-[#292929] text-white overflow-hidden pb-20 md:pb-28 -mt-25">
       <div className="absolute inset-0">
         <Image
           src="/images/roof1.jpg"
@@ -21,10 +21,10 @@ export default function Hero() {
           priority
         />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-br from-[#292929]/85 via-[#292929]/80 to-[#292929]/75"></div>
-      <div className="container relative z-10 pt-0">
-        <div className="flex flex-col items-center justify-start">
-          <div className="relative w-[420px] h-[420px] mb-3">
+      <div className="absolute inset-0 bg-linear-to-br from-[#292929]/85 via-[#292929]/80 to-[#292929]/75"></div>
+      <div className="container relative z-10">
+        <div className="flex flex-col items-center">
+          <div className="relative w-[420px] h-[420px]">
             <Image
               src="/tl-logo.png"
               alt="T & L Roofing Logo"

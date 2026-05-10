@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,12 +18,19 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-[#292929] shadow-xl border-b border-[#404040]">
-      <nav className="container py-3">
+      <nav className="container py-2">
         <div className="flex items-center justify-between gap-8">
-          <Link href="/" className="flex items-center shrink-0 group">
-            <span className="text-2xl text-white group-hover:text-[#1E97D4] transition-colors">
-              T&L Roofing
-            </span>
+          <Link href="/" className="flex items-center shrink-0 group gap-2">
+            <div className="relative w-16 h-16 shrink-0">
+              <Image
+                src="/tl-logo.png"
+                alt="T & L Roofing Logo"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <span className="text-2xl font-bold text-white">TL</span>
+            <span className="text-xl text-[#1E97D4]">Roofing Services</span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-4">
@@ -39,16 +47,22 @@ export default function Header() {
           </div>
 
           <div className="hidden md:flex items-center gap-6">
-            <a
-              href="tel:01130000000"
-              className="flex items-center gap-2 text-white hover:text-[#1E97D4] transition-colors font-semibold text-sm"
-            >
-              <Phone className="w-5 h-5" />
-              <div className="flex flex-col text-xs">
-                <span>07936 450711</span>
-                <span>07791 746045</span>
-              </div>
-            </a>
+            <Phone className="w-5 h-5" />
+            <div className="flex flex-col text-xs">
+              <a
+                href="tel:07936450711"
+                className="text-white hover:text-[#1E97D4] transition-colors font-semibold text-sm"
+              >
+                07936 450711
+              </a>
+              <a
+                href="tel:07791746045"
+                className="text-white hover:text-[#1E97D4] transition-colors font-semibold text-sm"
+              >
+                07791 746045
+              </a>
+            </div>
+
             <Link
               href="/contact"
               className="bg-[#1E97D4] hover:bg-[#0d7ab8] text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 whitespace-nowrap"

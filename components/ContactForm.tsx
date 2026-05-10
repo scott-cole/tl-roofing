@@ -39,7 +39,7 @@ export default function ContactForm() {
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="space-y-8 flex-1">
               <div className="flex items-start space-x-8">
-                <div className="w-20 h-20 bg-[#1E97D4]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-20 h-20 bg-[#1E97D4]/10 rounded-xl flex items-center justify-center shrink-0">
                   <Phone className="w-8 h-8 text-[#1E97D4]" />
                 </div>
                 <div className="flex flex-col">
@@ -63,7 +63,7 @@ export default function ContactForm() {
               </div>
 
               <div className="flex items-start space-x-8">
-                <div className="w-16 h-16 bg-[#1E97D4]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-16 h-16 bg-[#1E97D4]/10 rounded-lg flex items-center justify-center shrink-0">
                   <Mail className="w-8 h-8 text-[#1E97D4]" />
                 </div>
                 <div>
@@ -81,7 +81,7 @@ export default function ContactForm() {
               </div>
 
               <div className="flex items-start space-x-8">
-                <div className="w-16 h-16 bg-[#1E97D4]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-16 h-16 bg-[#1E97D4]/10 rounded-lg flex items-center justify-center shrink-0">
                   <MapPin className="w-8 h-8 text-[#1E97D4]" />
                 </div>
                 <div>
@@ -102,25 +102,25 @@ export default function ContactForm() {
               <div className="bg-[#333333] rounded-2xl p-8 border border-[#404040]">
                 <div className="flex flex-wrap gap-6 justify-center">
                   <div className="flex items-center space-x-4">
-                    <CheckCircle className="w-6 h-6 text-[#1E97D4] flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-[#1E97D4] shrink-0" />
                     <span className="text-base font-medium text-gray-300">
                       Free Quotes
                     </span>
                   </div>
                   <div className="flex items-center space-x-4">
-                    <CheckCircle className="w-6 h-6 text-[#1E97D4] flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-[#1E97D4] shrink-0" />
                     <span className="text-base font-medium text-gray-300">
                       24/7 Emergency
                     </span>
                   </div>
                   <div className="flex items-center space-x-4">
-                    <CheckCircle className="w-6 h-6 text-[#1E97D4] flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-[#1E97D4] shrink-0" />
                     <span className="text-base font-medium text-gray-300">
                       Fully Insured
                     </span>
                   </div>
                   <div className="flex items-center space-x-4">
-                    <CheckCircle className="w-6 h-6 text-[#1E97D4] flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-[#1E97D4] shrink-0" />
                     <span className="text-base font-medium text-gray-300">
                       Quality Work
                     </span>

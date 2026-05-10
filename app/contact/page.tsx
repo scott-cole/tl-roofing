@@ -3,22 +3,15 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact T & L Roofing | Get a Free Quote in Leeds",
-  description: "Contact T & L Roofing for professional roofing services in Leeds and West Yorkshire. Get a free quote for roof repairs, replacements, and installations.",
-  keywords: "contact roofing Leeds, roofing quote, free roof inspection, roofers contact",
+  description:
+    "Contact T & L Roofing for professional roofing services in Leeds and West Yorkshire. Get a free quote for roof repairs, replacements, and installations.",
+  keywords:
+    "contact roofing Leeds, roofing quote, free roof inspection, roofers contact",
 };
 
 export default function ContactPage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-secondary to-secondary-light text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
-          <p className="text-xl max-w-3xl mx-auto text-gray-300">
-            Get in touch with T & L Roofing for a free, no-obligation quote
-          </p>
-        </div>
-      </section>
-
       <ContactForm />
 
       <section className="py-20 bg-muted">
