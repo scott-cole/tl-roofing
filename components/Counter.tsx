@@ -59,12 +59,5 @@ export default function Counter({
     animationFrame = requestAnimationFrame(animate);
 
     return () => cancelAnimationFrame(animationFrame);
-  }, [isVisible, end, duration]);
-
-  return (
-    <span ref={ref} className="inline-block">
-      {count}
-      {suffix}
-    </span>
-  );
+  }, [hasAnimated, end, duration]);
 }
