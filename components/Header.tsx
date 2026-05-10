@@ -17,22 +17,20 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-[#292929] shadow-xl border-b border-[#404040]">
-      <nav className="container py-12">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-10 group">
-            <div className="hidden sm:block">
-              <span className="text-2xl font-normal text-white group-hover:text-[#1E97D4] transition-colors">
-                T&L Roofing
-              </span>
-            </div>
+      <nav className="container py-3">
+        <div className="flex items-center justify-between gap-8">
+          <Link href="/" className="flex items-center shrink-0 group">
+            <span className="text-2xl text-white group-hover:text-[#1E97D4] transition-colors">
+              T&L Roofing
+            </span>
           </Link>
 
-          <div className="hidden lg:flex items-center space-x-24">
+          <div className="hidden lg:flex items-center gap-4">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-gray-300 hover:text-[#1E97D4] transition-colors font-medium text-sm uppercase tracking-wide relative group py-5 px-6"
+                className="text-white hover:text-[#1E97D4] transition-colors font-semibold text-sm uppercase tracking-wide relative group py-2 px-3 whitespace-nowrap"
               >
                 {link.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1E97D4] transition-all group-hover:w-full"></span>
@@ -40,24 +38,27 @@ export default function Header() {
             ))}
           </div>
 
-          <div className="hidden md:flex items-center space-x-20">
+          <div className="hidden md:flex items-center gap-6">
             <a
               href="tel:01130000000"
-              className="flex items-center space-x-4 text-white hover:text-[#1E97D4] transition-colors font-semibold py-4 px-6"
+              className="flex items-center gap-2 text-white hover:text-[#1E97D4] transition-colors font-semibold text-sm"
             >
               <Phone className="w-5 h-5" />
-              <span className="text-base font-medium">0113 000 0000</span>
+              <div className="flex flex-col text-xs">
+                <span>07936 450711</span>
+                <span>07791 746045</span>
+              </div>
             </a>
             <Link
               href="/contact"
-              className="bg-[#1E97D4] hover:bg-[#0d7ab8] text-white font-medium py-4 px-14 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+              className="bg-[#1E97D4] hover:bg-[#0d7ab8] text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 whitespace-nowrap"
             >
               Get Quote
             </Link>
           </div>
 
           <button
-            className="lg:hidden p-6 rounded-lg hover:bg-white/10 transition-colors"
+            className="lg:hidden p-3 rounded-lg hover:bg-white/10 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -72,15 +73,15 @@ export default function Header() {
         <div
           className={cn(
             "lg:hidden overflow-hidden transition-all duration-300 ease-in-out",
-            isMenuOpen ? "max-h-96 mt-8" : "max-h-0",
+            isMenuOpen ? "max-h-96 mt-4" : "max-h-0",
           )}
         >
-          <div className="flex flex-col space-y-4 py-8 border-t border-white/20">
+          <div className="flex flex-col gap-2 py-6 border-t border-white/20">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-gray-300 hover:text-[#1E97D4] transition-colors font-medium py-4 text-lg px-8"
+                className="text-gray-300 hover:text-[#1E97D4] transition-colors font-semibold py-3 text-base px-4"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}
@@ -88,17 +89,17 @@ export default function Header() {
             ))}
             <a
               href="tel:01130000000"
-              className="flex items-center space-x-4 text-white font-semibold text-lg py-4 px-8"
+              className="flex items-center gap-2 text-white font-semibold text-base py-3 px-4"
             >
               <Phone className="w-5 h-5 text-[#1E97D4]" />
               <span>0113 000 0000</span>
             </a>
             <Link
               href="/contact"
-              className="bg-[#1E97D4] hover:bg-[#0d7ab8] text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200 text-center mx-8"
+              className="bg-[#1E97D4] hover:bg-[#0d7ab8] text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 text-center mx-4 mt-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Get a Free Quote
+              Get Quote
             </Link>
           </div>
         </div>

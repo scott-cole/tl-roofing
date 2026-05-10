@@ -1,10 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Shield, Clock, Award, CheckCircle, Phone } from "lucide-react";
+import {
+  ArrowRight,
+  Shield,
+  Clock,
+  Award,
+  CheckCircle,
+  Phone,
+} from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative bg-[#292929] text-white overflow-hidden">
+    <section className="relative bg-[#292929] text-white overflow-hidden pb-20 md:pb-28 -mt-[100px]">
       <div className="absolute inset-0">
         <Image
           src="/images/roof1.jpg"
@@ -14,10 +21,10 @@ export default function Hero() {
           priority
         />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-br from-[#292929] via-[#292929]/95 to-[[#292929]/90"></div>
-      <div className="container relative z-10">
-        <div className="flex flex-col items-center justify-center py-12 lg:py-20">
-          <div className="relative w-[350px] h-[350px] mb-10">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#292929]/85 via-[#292929]/80 to-[#292929]/75"></div>
+      <div className="container relative z-10 pt-0">
+        <div className="flex flex-col items-center justify-start">
+          <div className="relative w-[420px] h-[420px] mb-3">
             <Image
               src="/tl-logo.png"
               alt="T & L Roofing Logo"
@@ -26,48 +33,63 @@ export default function Hero() {
               priority
             />
           </div>
-          <div className="inline-flex items-center bg-[#1E97D4]/20 backdrop-blur-sm px-8 py-4 rounded-full border border-[#1E97D4]/30 mb-8">
+          <div className="inline-flex items-center bg-[#1E97D4]/20 backdrop-blur-sm px-6 py-3 rounded-full border border-[#1E97D4]/30 mb-8">
             <CheckCircle className="w-5 h-5 text-[#1E97D4] mr-3" />
-            <span className="text-sm font-medium uppercase tracking-wide">Serving Leeds & West Yorkshire</span>
+            <span className="text-sm font-medium uppercase tracking-wide">
+              Serving Leeds & West Yorkshire
+            </span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-center max-w-5xl">
             Professional{" "}
-            <span className="text-[#1E97D4]">Roofing Services</span>
-            {" "}You Can Trust
+            <span className="text-[#1E97D4]">Roofing Services</span> You Can
+            Trust
           </h1>
-          <p className="text-lg text-gray-400 leading-relaxed max-w-3xl mb-10 text-center">
-            Expert roof repairs, replacements, and installations. Quality workmanship
-            you can trust, with competitive prices and reliable service.
+          <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-3xl mb-10 text-center">
+            Expert roof repairs, replacements, and installations. Quality
+            workmanship you can trust, with competitive prices and reliable
+            service.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link
               href="/contact"
-              className="bg-[#1E97D4] hover:bg-[#0d7ab8] text-white font-semibold py-4 px-10 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center space-x-3"
+              className="bg-[#1E97D4] hover:bg-[#0d7ab8] text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2 whitespace-nowrap"
             >
               <span>Get Free Quote</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               href="/contact"
-              className="border-2 border-[#1E97D4] text-[#1E97D4] hover:bg-[#1E97D4] hover:text-white font-semibold py-4 px-10 rounded-lg transition-all duration-200 flex items-center justify-center space-x-3"
+              className="border-2 border-[#1E97D4] text-[#1E97D4] hover:bg-[#1E97D4] hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 flex items-center justify-center gap-2 whitespace-nowrap"
             >
               <Phone className="w-5 h-5" />
               <span>Call Now</span>
             </Link>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-16 max-w-4xl mx-auto pt-12 border-t border-[#404040]">
+          <div className="flex flex-wrap justify-center gap-12 md:gap-20 max-w-4xl mx-auto pt-12 border-t border-[#404040]">
             <div className="flex flex-col items-center">
-              <div className="text-5xl font-bold text-[#1E97D4] mb-2">15+</div>
-              <div className="text-sm text-gray-400 uppercase tracking-wide">Years Experience</div>
+              <div className="text-4xl md:text-5xl font-bold text-[#1E97D4] mb-3">
+                15+
+              </div>
+              <div className="text-sm text-gray-400 uppercase tracking-wide">
+                Years Experience
+              </div>
             </div>
             <div className="flex flex-col items-center">
-              <div className="text-5xl font-bold text-[#1E97D4] mb-2">500+</div>
-              <div className="text-sm text-gray-400 uppercase tracking-wide">Projects Done</div>
+              <div className="text-4xl md:text-5xl font-bold text-[#1E97D4] mb-3">
+                500+
+              </div>
+              <div className="text-sm text-gray-400 uppercase tracking-wide">
+                Projects Done
+              </div>
             </div>
             <div className="flex flex-col items-center">
-              <div className="text-5xl font-bold text-[#1E97D4] mb-2">100%</div>
-              <div className="text-sm text-gray-400 uppercase tracking-wide">Satisfaction</div>
+              <div className="text-4xl md:text-5xl font-bold text-[#1E97D4] mb-3">
+                100%
+              </div>
+              <div className="text-sm text-gray-400 uppercase tracking-wide">
+                Satisfaction
+              </div>
             </div>
           </div>
         </div>

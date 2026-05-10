@@ -12,9 +12,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "T & L Roofing | Professional Roofing Services in Leeds & West Yorkshire",
-  description: "Expert roofing services in Leeds and West Yorkshire. Professional roof repairs, replacements, installations, and emergency services. Trusted local roofers with quality workmanship.",
-  keywords: "roofing Leeds, roofers West Yorkshire, roof repairs, roof replacement, emergency roofing, gutter services, roof inspections, T & L Roofing",
+  title:
+    "T & L Roofing | Professional Roofing Services in Leeds & West Yorkshire",
+  description:
+    "Expert roofing services in Leeds and West Yorkshire. Professional roof repairs, replacements, installations, and emergency services. Trusted local roofers with quality workmanship.",
+  keywords:
+    "roofing Leeds, roofers West Yorkshire, roof repairs, roof replacement, emergency roofing, gutter services, roof inspections, T & L Roofing",
   authors: [{ name: "T & L Roofing" }],
   creator: "T & L Roofing",
   publisher: "T & L Roofing",
@@ -28,12 +31,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     url: "https://tlroofing.co.uk",
-    title: "T & L Roofing | Professional Roofing Services in Leeds & West Yorkshire",
-    description: "Expert roofing services in Leeds and West Yorkshire. Professional roof repairs, replacements, installations, and emergency services.",
+    title:
+      "T & L Roofing | Professional Roofing Services in Leeds & West Yorkshire",
+    description:
+      "Expert roofing services in Leeds and West Yorkshire. Professional roof repairs, replacements, installations, and emergency services.",
     siteName: "T & L Roofing",
     images: [
       {
-        url: "/tl-logo.png",
+        url: "/tl-logo-favicon.png",
         width: 1000,
         height: 1000,
         alt: "T & L Roofing Logo",
@@ -42,9 +47,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "T & L Roofing | Professional Roofing Services in Leeds & West Yorkshire",
-    description: "Expert roofing services in Leeds and West Yorkshire. Professional roof repairs, replacements, installations, and emergency services.",
-    images: ["/tl-logo.png"],
+    title:
+      "T & L Roofing | Professional Roofing Services in Leeds & West Yorkshire",
+    description:
+      "Expert roofing services in Leeds and West Yorkshire. Professional roof repairs, replacements, installations, and emergency services.",
+    images: ["/tl-logo-favicon.png"],
     creator: "@tlroofing",
   },
   robots: {
@@ -62,9 +69,9 @@ export const metadata: Metadata = {
     google: "your-google-verification-code",
   },
   icons: {
-    icon: "/tl-logo.png",
-    shortcut: "/tl-logo.png",
-    apple: "/tl-logo.png",
+    icon: "/tl-logo-favicon.png",
+    shortcut: "/tl-logo-favicon.png",
+    apple: "/tl-logo-favicon.png",
   },
 };
 
