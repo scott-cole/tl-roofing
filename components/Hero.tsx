@@ -4,9 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   ArrowRight,
-  Shield,
-  Clock,
-  Award,
   CheckCircle,
   Phone,
   ChevronDown,
@@ -25,8 +22,9 @@ export default function Hero() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
-    <section className="relative bg-[#292929] text-white overflow-hidden pb-20 md:pb-28 -mt-25">
+    <section className="relative bg-[#292929] text-white overflow-hidden py-20 md:py-28 -mt-25">
       <div className="absolute inset-0">
         <Image
           src="/images/roof1.jpg"
@@ -37,19 +35,23 @@ export default function Hero() {
           priority
         />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-br from-[#292929]/85 via-[#292929]/80 to-[#292929]/75 animate-gradient"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#292929]/90 via-[#292929]/85 to-[#292929]/80"></div>
+
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="relative w-[600px] h-[600px] opacity-5">
+          <Image
+            src="/tl-logo.png"
+            alt="T & L Roofing Logo"
+            fill
+            className="object-contain"
+            priority
+          />
+        </div>
+      </div>
+
       <div className="container relative z-10">
-        <div className="flex flex-col items-center pb-16">
-          <div className="relative w-[420px] h-[420px] -mt-24">
-            <Image
-              src="/tl-logo.png"
-              alt="T & L Roofing Logo"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
-          <div className="inline-flex items-center bg-[#1E97D4]/20 backdrop-blur-sm px-6 py-3 rounded-full border border-[#1E97D4]/30 -mt-24 mb-8">
+        <div className="flex flex-col items-center">
+          <div className="inline-flex items-center bg-[#1E97D4]/20 backdrop-blur-sm px-6 py-3 rounded-full border border-[#1E97D4]/30 mb-8">
             <CheckCircle className="w-5 h-5 text-[#1E97D4] mr-3" />
             <span className="text-sm font-medium uppercase tracking-wide">
               Serving Leeds & West Yorkshire
@@ -82,10 +84,10 @@ export default function Hero() {
             </Link>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-12 md:gap-20 max-w-4xl mx-auto pt-4 border-t border-[#404040]">
+          <div className="flex flex-wrap justify-center gap-12 md:gap-20 max-w-4xl mx-auto pt-12 border-t border-[#404040]">
             <div className="flex flex-col items-center">
               <div className="text-4xl md:text-5xl font-bold text-[#1E97D4] mb-3">
-                <Counter end={15} suffix="+" />
+                <Counter end={15} suffix="+" animateOnMount={true} />
               </div>
               <div className="text-sm text-gray-400 uppercase tracking-wide">
                 Years Experience
@@ -93,7 +95,7 @@ export default function Hero() {
             </div>
             <div className="flex flex-col items-center">
               <div className="text-4xl md:text-5xl font-bold text-[#1E97D4] mb-3">
-                <Counter end={500} suffix="+" />
+                <Counter end={500} suffix="+" animateOnMount={true} />
               </div>
               <div className="text-sm text-gray-400 uppercase tracking-wide">
                 Projects Done
@@ -101,7 +103,7 @@ export default function Hero() {
             </div>
             <div className="flex flex-col items-center">
               <div className="text-4xl md:text-5xl font-bold text-[#1E97D4] mb-3">
-                <Counter end={100} suffix="%" />
+                <Counter end={100} suffix="%" animateOnMount={true} />
               </div>
               <div className="text-sm text-gray-400 uppercase tracking-wide">
                 Satisfaction
@@ -110,7 +112,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <a
             href="#services"
             className="text-[#1E97D4] hover:text-white transition-colors"
