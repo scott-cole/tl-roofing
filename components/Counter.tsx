@@ -1,25 +1,32 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Counter({
   end,
   duration = 2000,
   suffix = "",
+  animateOnMount = false,
 }: {
   end: number;
   duration?: number;
   suffix?: string;
+  animateOnMount?: boolean;
 }) {
   const [count, setCount] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(animateOnMount);
   const ref = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
+    if (animateOnMount && !hasAnimated) {
+      setHasAnimated(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true);
+        if (entries[0].isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
         }
       },
       { threshold: 0.5 }
@@ -30,10 +37,10 @@ export default function Counter({
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [animateOnMount, hasAnimated]);
 
   useEffect(() => {
-    if (!isVisible) return;
+    if (!hasAnimated) return;
 
     let startTime: number;
     let animationFrame: number;

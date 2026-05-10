@@ -39,7 +39,7 @@ export default function Hero() {
       </div>
       <div className="absolute inset-0 bg-gradient-to-br from-[#292929]/85 via-[#292929]/80 to-[#292929]/75 animate-gradient"></div>
       <div className="container relative z-10">
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center pb-16">
           <div className="relative w-[420px] h-[420px]">
             <Image
               src="/tl-logo.png"
@@ -85,7 +85,7 @@ export default function Hero() {
           <div className="flex flex-wrap justify-center gap-12 md:gap-20 max-w-4xl mx-auto pt-12 border-t border-[#404040]">
             <div className="flex flex-col items-center">
               <div className="text-4xl md:text-5xl font-bold text-[#1E97D4] mb-3">
-                <Counter end={15} suffix="+" />
+                <Counter end={15} suffix="+" animateOnMount={true} />
               </div>
               <div className="text-sm text-gray-400 uppercase tracking-wide">
                 Years Experience
@@ -93,7 +93,7 @@ export default function Hero() {
             </div>
             <div className="flex flex-col items-center">
               <div className="text-4xl md:text-5xl font-bold text-[#1E97D4] mb-3">
-                <Counter end={500} suffix="+" />
+                <Counter end={500} suffix="+" animateOnMount={true} />
               </div>
               <div className="text-sm text-gray-400 uppercase tracking-wide">
                 Projects Done
@@ -101,7 +101,7 @@ export default function Hero() {
             </div>
             <div className="flex flex-col items-center">
               <div className="text-4xl md:text-5xl font-bold text-[#1E97D4] mb-3">
-                <Counter end={100} suffix="%" />
+                <Counter end={100} suffix="%" animateOnMount={true} />
               </div>
               <div className="text-sm text-gray-400 uppercase tracking-wide">
                 Satisfaction
