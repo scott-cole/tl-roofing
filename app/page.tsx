@@ -3,7 +3,9 @@ import Hero from "@/components/Hero";
 import ServiceCard from "@/components/ServiceCard";
 import Testimonials from "@/components/Testimonials";
 import ContactForm from "@/components/ContactForm";
+import Gallery from "@/components/Gallery";
 import ScrollReveal from "@/components/ScrollReveal";
+import { galleryImages } from "@/lib/images";
 import {
   Wrench,
   House,
@@ -158,6 +160,23 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Gallery
+        images={galleryImages}
+        title="Our Recent Work"
+        subtitle="Take a look at some of our completed roofing projects across Leeds and West Yorkshire"
+        limit={6}
+      />
+
+      <div className="text-center bg-[#292929] pb-16 -mt-8">
+        <Link
+          href="/gallery"
+          className="btn-primary inline-flex items-center gap-2"
+        >
+          <span>View Full Gallery</span>
+          <ArrowRight className="w-5 h-5" />
+        </Link>
+      </div>
 
       <Testimonials />
       <ContactForm />
