@@ -2,12 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import {
-  ArrowRight,
-  CheckCircle,
-  Phone,
-  ChevronDown,
-} from "lucide-react";
+import { ArrowRight, CheckCircle, Phone, ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
 import Counter from "./Counter";
 
@@ -24,7 +19,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative bg-[#292929] text-white overflow-hidden py-20 md:py-28 -mt-25">
+    <section className="relative bg-[#292929] text-white overflow-hidden py-20 md:py-28 -mt-16">
       <div className="absolute inset-0">
         <Image
           src="/images/roof1.jpg"
@@ -51,17 +46,17 @@ export default function Hero() {
 
       <div className="container relative z-10">
         <div className="flex flex-col items-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-center max-w-5xl">
+            Professional{" "}
+            <span className="text-[#1E97D4]">Roofing Services</span> You Can
+            Trust
+          </h1>
           <div className="inline-flex items-center bg-[#1E97D4]/20 backdrop-blur-sm px-6 py-3 rounded-full border border-[#1E97D4]/30 mb-8">
             <CheckCircle className="w-5 h-5 text-[#1E97D4] mr-3" />
             <span className="text-sm font-medium uppercase tracking-wide">
               Serving Leeds & West Yorkshire
             </span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-center max-w-5xl">
-            Professional{" "}
-            <span className="text-[#1E97D4]">Roofing Services</span> You Can
-            Trust
-          </h1>
           <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-3xl mb-10 text-center">
             Expert roof repairs, replacements, and installations. Quality
             workmanship you can trust, with competitive prices and reliable
