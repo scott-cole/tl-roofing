@@ -1,10 +1,20 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Shield, Clock, Award, CheckCircle, Phone } from "lucide-react";
 
 export default function Hero() {
   return (
     <section className="relative bg-gradient-to-br from-secondary via-secondary to-secondary-light text-white overflow-hidden">
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] opacity-20"></div>
+      <div className="absolute inset-0">
+        <Image
+          src="/images/roof1.jpg"
+          alt="Professional roofing work"
+          fill
+          className="object-cover opacity-20"
+          priority
+        />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/90 to-secondary/70"></div>
       <div className="container mx-auto px-4 py-20 md:py-32 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
@@ -55,47 +65,29 @@ export default function Hero() {
           </div>
 
           <div className="hidden lg:block relative">
-            <div className="bg-gradient-to-br from-primary/20 to-transparent rounded-2xl p-8 backdrop-blur-sm border border-white/10">
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Shield className="w-6 h-6 text-white" />
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src="/images/roof2.jpg"
+                alt="Professional roofing work"
+                width={600}
+                height={400}
+                className="w-full h-auto object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <div className="grid grid-cols-3 gap-4">
+                  <div className="text-center">
+                    <Shield className="w-8 h-8 text-primary mx-auto mb-2" />
+                    <p className="text-xs font-medium">Fully Insured</p>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">Fully Insured</h3>
-                    <p className="text-gray-400 text-sm">Comprehensive insurance for your peace of mind</p>
+                  <div className="text-center">
+                    <Clock className="w-8 h-8 text-primary mx-auto mb-2" />
+                    <p className="text-xs font-medium">24/7 Emergency</p>
                   </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-white" />
+                  <div className="text-center">
+                    <Award className="w-8 h-8 text-primary mx-auto mb-2" />
+                    <p className="text-xs font-medium">Quality Work</p>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">24/7 Emergency</h3>
-                    <p className="text-gray-400 text-sm">Fast response to urgent roofing problems</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Award className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">Quality Assured</h3>
-                    <p className="text-gray-400 text-sm">High standards with guaranteed workmanship</p>
-                  </div>
-                </div>
-
-                <div className="bg-white/10 rounded-xl p-6 mt-6">
-                  <p className="text-2xl font-bold text-white mb-2">0113 000 0000</p>
-                  <p className="text-sm text-gray-400 mb-4">Call us 24/7 for emergency repairs</p>
-                  <Link
-                    href="tel:01130000000"
-                    className="w-full btn-primary text-center"
-                  >
-                    Call Now
-                  </Link>
                 </div>
               </div>
             </div>
