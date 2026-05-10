@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# T &amp; L Roofing
+
+Professional roofing services in Leeds and West Yorkshire.
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/) — React framework with App Router
+- [Tailwind CSS v4](https://tailwindcss.com/) — utility-first styling
+- [Nodemailer](https://nodemailer.com/) — contact form email delivery via Outlook SMTP
+- [Lucide](https://lucide.dev/) — icon library
+- Hosted on [Vercel](https://vercel.com/)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Copy `.env.example` to `.env.local` and fill in your SMTP credentials:
 
-## Learn More
+```bash
+cp .env.example .env.local
+```
 
-To learn more about Next.js, take a look at the following resources:
+| Variable | Description |
+|----------|-------------|
+| `SMTP_HOST` | SMTP server (e.g. `smtp.office365.com`) |
+| `SMTP_PORT` | SMTP port (e.g. `587`) |
+| `SMTP_EMAIL` | Sender email address |
+| `SMTP_PASSWORD` | App password (not your regular password) |
+| `CONTACT_EMAIL` | Where contact form submissions are sent |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+```
 
-## Deploy on Vercel
+## Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `app/` — Next.js App Router pages and API routes
+- `components/` — Reusable React components
+- `lib/` — Utilities and data helpers
+- `public/images/` — Gallery images (roof1–roof36)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+Deployed on Vercel. Push to `main` to trigger automatic deployments.
