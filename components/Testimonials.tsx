@@ -32,25 +32,32 @@ export default function Testimonials() {
   }, []);
   const reviews = [
     {
-      name: "Sarah Thompson",
-      location: "Leeds",
+      name: "michelle31989",
+      location: "Wakefield",
       rating: 5,
-      text: "Excellent work from T & L Roofing! They replaced our roof quickly and professionally. The team was polite and left everything tidy. Highly recommend!",
-      date: "2 weeks ago",
+      text: "Brilliant work, great communication and workmanship. Guys were helpful and worked around other trades really well.",
+      source: "MyBuilder",
     },
     {
-      name: "James Wilson",
-      location: "West Yorkshire",
-      rating: 5,
-      text: "Had an emergency roof leak and T & L Roofing came out the same day. Fixed the problem efficiently at a fair price. Very grateful for their quick response!",
-      date: "1 month ago",
-    },
-    {
-      name: "Emma Davis",
+      name: "deadlyden",
       location: "Leeds",
       rating: 5,
-      text: "Professional service from start to finish. The team explained everything clearly and did a fantastic job on our new roof installation. Will definitely use again.",
-      date: "3 weeks ago",
+      text: "We would highly recommend TL Roofing Services. Completed the job fully in inclement weather conditions to our full satisfaction. The roof, facias, gutters fall pipes and new slate bay and leading look superb with many positive comments from neighbours. Two guys with a great personality, plus a great team as well...",
+      source: "MyBuilder",
+    },
+    {
+      name: "tania31720",
+      location: "Leeds",
+      rating: 5,
+      text: "I was desperate to find someone as our roof was leaking badly. Between so many quotes, we chose TL roofing and I am very pleased with the service and care that we received from them. I am definitely recommend this firm to anyone in need of roofing work. They gave us fair quotes with clear understanding of every step that they were taking in order to replace our flat roofs as well as all the tiles and started their work on time and through 2 weeks of work I am satisfied with their professional approach and high standards of workmanship.",
+      source: "MyBuilder",
+    },
+    {
+      name: "biggles_18",
+      location: "Leeds",
+      rating: 5,
+      text: "Tom was quick to respond to my posted job to renew 2 bay windows roofs. He arrived to quote when he said he would and kept me up to date with an install date. Tom and his colleague are very polite and worked non stop to get the roofs installed. The new fibreglass roofs look much better than the old ones and I'm very happy with the result. The price was competitive and I will not hesitate to recommend them to family and friends.",
+      source: "MyBuilder",
     },
   ];
 
@@ -76,7 +83,7 @@ export default function Testimonials() {
             {reviews.map((review, index) => (
               <div
                 key={index}
-                className={`bg-[#404040] rounded-2xl shadow-lg p-8 relative card-hover border border-[#4a4a4a] ${
+                className={`bg-[#404040] rounded-2xl shadow-lg p-8 relative card-hover border border-[#4a4a4a] flex flex-col ${
                   isMobile ? "w-[70vw] snap-start flex-shrink-0" : ""
                 }`}
               >
@@ -89,15 +96,18 @@ export default function Testimonials() {
                     />
                   ))}
                 </div>
-                <p className="text-gray-300 mb-8 italic leading-relaxed">
+                <p className="text-gray-300 mb-8 italic leading-relaxed line-clamp-6">
                   &ldquo;{review.text}&rdquo;
                 </p>
-                <div className="flex items-center justify-between pt-6 border-t border-[#4a4a4a]">
+                <div className="flex items-center justify-between pt-6 border-t border-[#4a4a4a] mt-auto">
                   <div>
                     <p className="font-bold text-white">{review.name}</p>
                     <p className="text-sm text-gray-400">{review.location}</p>
                   </div>
-                  <span className="text-sm text-gray-500">{review.date}</span>
+                  <div className="flex items-center gap-1.5">
+                    <svg className="w-4 h-4 text-green-500" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                    <span className="text-xs text-gray-500">Verified</span>
+                  </div>
                 </div>
               </div>
             ))}

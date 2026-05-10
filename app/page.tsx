@@ -178,7 +178,7 @@ export default function Home() {
         </Link>
       </div>
 
-      {/* <Testimonials /> */}
+      <Testimonials />
       <ContactForm />
 
       <ScrollReveal>
