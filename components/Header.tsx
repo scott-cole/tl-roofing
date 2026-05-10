@@ -17,6 +17,17 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
+
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/services", label: "Services" },
@@ -92,7 +103,7 @@ export default function Header() {
 
         {/* Mobile Menu - Full Screen */}
         {isMenuOpen && (
-          <div className="lg:hidden fixed inset-0 top-[73px] bg-[#292929] z-40 flex flex-col">
+          <div className="lg:hidden fixed inset-0 top-[73px] bg-[#1a1a1a] z-40 flex flex-col overflow-y-auto">
             <div className="flex flex-col gap-6 py-8 px-6 flex-1">
               {navLinks.map((link) => (
                 <Link
