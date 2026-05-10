@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: "T & L Roofing",
     images: [
       {
-        url: "/logo.svg",
+        url: "/tl-logo.png",
         width: 1000,
         height: 1000,
         alt: "T & L Roofing Logo",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "T & L Roofing | Professional Roofing Services in Leeds & West Yorkshire",
     description: "Expert roofing services in Leeds and West Yorkshire. Professional roof repairs, replacements, installations, and emergency services.",
-    images: ["/logo.svg"],
+    images: ["/tl-logo.png"],
     creator: "@tlroofing",
   },
   robots: {
@@ -60,6 +60,11 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "your-google-verification-code",
+  },
+  icons: {
+    icon: "/tl-logo.png",
+    shortcut: "/tl-logo.png",
+    apple: "/tl-logo.png",
   },
 };
 

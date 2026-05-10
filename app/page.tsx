@@ -11,6 +11,10 @@ import {
   ClipboardCheck,
   AlertTriangle,
   ArrowRight,
+  CheckCircle,
+  Shield,
+  Award,
+  Clock,
 } from "lucide-react";
 
 export default function Home() {
@@ -53,14 +57,37 @@ export default function Home() {
     },
   ];
 
+  const benefits = [
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Local Expertise",
+      description: "Serving Leeds and West Yorkshire for years. We understand local building requirements and weather conditions.",
+    },
+    {
+      icon: <Award className="w-8 h-8" />,
+      title: "Quality Materials",
+      description: "We use only high-quality roofing materials from trusted manufacturers to ensure longevity and performance.",
+    },
+    {
+      icon: <Clock className="w-8 h-8" />,
+      title: "Competitive Pricing",
+      description: "Fair, transparent pricing with no hidden costs. Get value for money without compromising on quality.",
+    },
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: "Guaranteed Workmanship",
+      description: "All our work comes with a satisfaction guarantee. We stand behind every project we complete.",
+    },
+  ];
+
   return (
     <>
       <Hero />
 
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Our Roofing Services
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -68,90 +95,47 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <ServiceCard key={index} {...service} />
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-16">
             <Link
               href="/services"
-              className="inline-flex items-center bg-primary text-white px-8 py-4 rounded-lg hover:bg-primary-light transition-colors font-semibold text-lg"
+              className="btn-primary inline-flex items-center space-x-2"
             >
-              View All Services
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <span>View All Services</span>
+              <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-16 text-center">
               Why Choose T & L Roofing?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl">✓</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    Local Expertise
+              {benefits.map((benefit, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl p-8 shadow-lg card-hover"
+                >
+                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                    <div className="text-primary">{benefit.icon}</div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                    {benefit.title}
                   </h3>
-                  <p className="text-gray-600">
-                    Serving Leeds and West Yorkshire for years. We understand local
-                    building requirements and weather conditions.
+                  <p className="text-gray-600 leading-relaxed">
+                    {benefit.description}
                   </p>
                 </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl">✓</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    Quality Materials
-                  </h3>
-                  <p className="text-gray-600">
-                    We use only high-quality roofing materials from trusted manufacturers
-                    to ensure longevity and performance.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl">✓</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    Competitive Pricing
-                  </h3>
-                  <p className="text-gray-600">
-                    Fair, transparent pricing with no hidden costs. Get value for money
-                    without compromising on quality.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl">✓</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    Guaranteed Workmanship
-                  </h3>
-                  <p className="text-gray-600">
-                    All our work comes with a satisfaction guarantee. We stand behind
-                    every project we complete.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -160,18 +144,18 @@ export default function Home() {
       <Testimonials />
       <ContactForm />
 
-      <section className="py-16 bg-primary text-white text-center">
+      <section className="py-20 bg-secondary text-white text-center">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready to Get Started?
           </h2>
-          <p className="text-xl mb-8 text-gray-100 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 text-gray-300 max-w-2xl mx-auto leading-relaxed">
             Contact T & L Roofing today for a free, no-obligation quote. We're here
             to help with all your roofing needs in Leeds and West Yorkshire.
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+            className="btn-primary inline-block"
           >
             Get Your Free Quote
           </Link>

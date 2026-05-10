@@ -111,24 +111,24 @@ export default function ServicesPage() {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-primary to-primary-dark text-white py-16">
+      <section className="bg-gradient-to-br from-secondary to-secondary-light text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Roofing Services</h1>
-          <p className="text-xl max-w-3xl mx-auto text-gray-100">
+          <p className="text-xl max-w-3xl mx-auto text-gray-300">
             Comprehensive roofing solutions for homes and businesses in Leeds and
             West Yorkshire
           </p>
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="space-y-16">
+          <div className="space-y-20">
             {services.map((service) => (
               <div
                 key={service.id}
                 id={service.id}
-                className="scroll-mt-20"
+                className="scroll-mt-24"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                   <div>
@@ -140,37 +140,37 @@ export default function ServicesPage() {
                         {service.title}
                       </h2>
                     </div>
-                    <p className="text-lg text-gray-600 mb-6">
+                    <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                       {service.description}
                     </p>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                    <h3 className="text-xl font-bold text-gray-900 mb-6">
                       What's Included:
                     </h3>
-                    <ul className="space-y-3">
+                    <ul className="space-y-4">
                       {service.features.map((feature, index) => (
                         <li key={index} className="flex items-start space-x-3">
                           <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-700">{feature}</span>
+                          <span className="text-gray-700 leading-relaxed">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
-                  <div className="bg-gray-50 rounded-2xl p-8">
+                  <div className="bg-muted rounded-2xl p-8 shadow-lg">
                     <h3 className="text-2xl font-bold text-gray-900 mb-6">
                       Need {service.title}?
                     </h3>
-                    <p className="text-gray-600 mb-6">
+                    <p className="text-gray-600 mb-8 leading-relaxed">
                       Contact T & L Roofing for a free quote on{" "}
                       {service.title.toLowerCase()}. Our team is ready to help
                       with your roofing needs in Leeds and West Yorkshire.
                     </p>
                     <a
                       href="/contact"
-                      className="inline-flex items-center bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary-light transition-colors font-semibold"
+                      className="btn-primary inline-flex items-center"
                     >
                       Get Free Quote
                     </a>
-                    <div className="mt-6 pt-6 border-t border-gray-200">
+                    <div className="mt-8 pt-8 border-t border-gray-200">
                       <p className="text-sm text-gray-500">
                         <strong className="text-gray-900">Service Area:</strong>{" "}
                         Leeds, West Yorkshire, and surrounding areas
@@ -184,9 +184,9 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Can't Find What You Need?
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
@@ -195,7 +195,7 @@ export default function ServicesPage() {
           </p>
           <a
             href="/contact"
-            className="inline-flex items-center bg-primary text-white px-8 py-4 rounded-lg hover:bg-primary-light transition-colors font-semibold text-lg"
+            className="btn-primary inline-block"
           >
             Contact Us Today
           </a>

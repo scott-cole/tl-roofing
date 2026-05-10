@@ -10,18 +10,18 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ title, description, icon, href }: ServiceCardProps) {
   return (
-    <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-100 group">
-      <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+    <div className="bg-white rounded-2xl shadow-lg p-8 card-hover border border-gray-100 group">
+      <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-all duration-300 group-hover:scale-110">
         <div className="text-primary">{icon}</div>
       </div>
-      <h3 className="text-xl font-bold mb-3 text-gray-900">{title}</h3>
-      <p className="text-gray-600 mb-4 flex-grow">{description}</p>
+      <h3 className="text-2xl font-bold mb-3 text-gray-900 group-hover:text-primary transition-colors">{title}</h3>
+      <p className="text-gray-600 mb-6 flex-grow leading-relaxed">{description}</p>
       <Link
         href={href}
-        className="inline-flex items-center text-primary font-semibold hover:text-primary-light transition-colors group/link"
+        className="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition-colors group/link"
       >
         Learn More
-        <ArrowRight className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" />
+        <ArrowRight className="w-4 h-4 ml-2 group-hover/link:translate-x-2 transition-transform" />
       </Link>
     </div>
   );

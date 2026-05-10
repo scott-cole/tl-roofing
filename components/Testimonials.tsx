@@ -26,10 +26,10 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-20 bg-muted">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             What Our Customers Say
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -37,22 +37,22 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-md p-6 relative hover:shadow-lg transition-shadow"
+              className="bg-white rounded-2xl shadow-lg p-8 relative card-hover"
             >
-              <Quote className="absolute top-4 right-4 w-8 h-8 text-primary/20" />
-              <div className="flex items-center space-x-1 mb-3">
+              <Quote className="absolute top-6 right-6 w-10 h-10 text-primary/20" />
+              <div className="flex items-center space-x-1 mb-4">
                 {[...Array(review.rating)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
-              <p className="text-gray-700 mb-4 italic">"{review.text}"</p>
-              <div className="flex items-center justify-between">
+              <p className="text-gray-700 mb-6 italic leading-relaxed">"{review.text}"</p>
+              <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                 <div>
-                  <p className="font-semibold text-gray-900">{review.name}</p>
+                  <p className="font-bold text-gray-900">{review.name}</p>
                   <p className="text-sm text-gray-500">{review.location}</p>
                 </div>
                 <span className="text-sm text-gray-400">{review.date}</span>
@@ -62,29 +62,29 @@ export default function Testimonials() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <div className="bg-white rounded-xl shadow-md p-8 text-center border-2 border-yellow-400 hover:shadow-lg transition-shadow">
-            <div className="text-6xl mb-4">⭐</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">5-Star Rated</h3>
-            <p className="text-gray-600 mb-4">
+          <div className="bg-white rounded-2xl shadow-lg p-10 text-center card-hover border-2 border-yellow-400">
+            <div className="text-7xl mb-6">⭐</div>
+            <h3 className="text-3xl font-bold text-gray-900 mb-3">5-Star Rated</h3>
+            <p className="text-gray-600 mb-6 text-lg">
               Highly rated roofing company in Leeds on Google Reviews
             </p>
-            <div className="flex items-center justify-center space-x-1 mb-2">
+            <div className="flex items-center justify-center space-x-1 mb-3">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
+                <Star key={i} className="w-7 h-7 fill-yellow-400 text-yellow-400" />
               ))}
             </div>
             <p className="text-sm text-gray-500">Based on customer reviews</p>
           </div>
 
-          <div className="bg-white rounded-xl shadow-md p-8 text-center border-2 border-green-500 hover:shadow-lg transition-shadow">
-            <div className="text-6xl mb-4">✓</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">Excellent</h3>
-            <p className="text-gray-600 mb-4">
+          <div className="bg-white rounded-2xl shadow-lg p-10 text-center card-hover border-2 border-green-500">
+            <div className="text-7xl mb-6">✓</div>
+            <h3 className="text-3xl font-bold text-gray-900 mb-3">Excellent</h3>
+            <p className="text-gray-600 mb-6 text-lg">
               Top-rated on Trustpilot for roofing services in West Yorkshire
             </p>
-            <div className="flex items-center justify-center space-x-1 mb-2">
+            <div className="flex items-center justify-center space-x-1 mb-3">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-6 h-6 fill-green-500 text-green-500" />
+                <Star key={i} className="w-7 h-7 fill-green-500 text-green-500" />
               ))}
             </div>
             <p className="text-sm text-gray-500">Trustpilot Excellent Rating</p>
