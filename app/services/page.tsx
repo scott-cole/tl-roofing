@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   keywords:
     "roofing services Leeds, roof repairs, roof replacement, roof installation, gutter services, roof inspections, emergency roofing",
   alternates: {
-    canonical: "https://tlroofing.co.uk/services",
+    canonical: "https://tl-roofing.co.uk/services",
   },
 };
 

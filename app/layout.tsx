@@ -89,7 +89,7 @@ export default function RootLayout({
         <ReviewSchema />
         <BreadcrumbSchema
           items={[
-            { name: "Home", url: "https://tlroofing.co.uk" },
+            { name: "Home", url: "https://tl-roofing.co.uk" },
           ]}
         />
         <Header />

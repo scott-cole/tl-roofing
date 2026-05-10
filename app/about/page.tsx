@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   keywords:
     "T & L Roofing, about us, roofing company Leeds, professional roofers",
   alternates: {
-    canonical: "https://tlroofing.co.uk/about",
+    canonical: "https://tl-roofing.co.uk/about",
   },
 };
 

@@ -3,16 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin, Star, Shield, Award, CheckCircle } from "lucide-react";
-import { useState } from "react";
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
-
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert("Thank you for subscribing to our newsletter!");
-    setEmail("");
-  };
   const currentYear = new Date().getFullYear();
 
   return (
@@ -41,26 +33,6 @@ export default function Footer() {
               workmanship, reliable service, and competitive prices for all your
               roofing needs.
             </p>
-
-            <div className="mb-8">
-              <h4 className="text-lg font-bold mb-4">Newsletter Signup</h4>
-              <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-[#1E97D4] transition-colors"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="bg-[#1E97D4] hover:bg-[#0d7ab8] px-6 py-3 rounded-lg transition-colors font-semibold"
-                >
-                  Subscribe
-                </button>
-              </form>
-            </div>
 
             <div className="mb-8">
               <h4 className="text-lg font-bold mb-4">Trust Badges</h4>

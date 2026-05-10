@@ -4,7 +4,7 @@ export default function SchemaMarkup() {
     "@type": "LocalBusiness",
     name: "T & L Roofing",
     description: "Professional roofing services in Leeds and West Yorkshire. Expert roof repairs, replacements, installations, and emergency services.",
-    url: "https://tlroofing.co.uk",
+    url: "https://tl-roofing.co.uk",
     telephone: ["07936 450711", "07791 746045"],
     email: "tl.roofing@outlook.com",
     address: {
@@ -42,7 +42,7 @@ export default function SchemaMarkup() {
       },
     ],
     priceRange: "££",
-    image: "https://tlroofing.co.uk/tl-logo.png",
+    image: "https://tl-roofing.co.uk/tl-logo.png",
     sameAs: [
       "https://www.facebook.com/TLROOFINGSERVICES",
     ],

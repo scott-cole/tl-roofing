@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tlroofing.co.uk/sitemap.xml
+Sitemap: https://tl-roofing.co.uk/sitemap.xml

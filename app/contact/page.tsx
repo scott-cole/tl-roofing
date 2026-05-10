@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   keywords:
     "contact roofing Leeds, roofing quote, free roof inspection, roofers contact",
   alternates: {
-    canonical: "https://tlroofing.co.uk/contact",
+    canonical: "https://tl-roofing.co.uk/contact",
   },
 };
 
@@ -20,8 +20,8 @@ export default function ContactPage() {
       <FAQSchema />
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://tlroofing.co.uk" },
-          { name: "Contact", url: "https://tlroofing.co.uk/contact" },
+          { name: "Home", url: "https://tl-roofing.co.uk" },
+          { name: "Contact", url: "https://tl-roofing.co.uk/contact" },
         ]}
       />
       <ContactForm />
