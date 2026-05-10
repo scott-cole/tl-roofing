@@ -84,7 +84,7 @@ export default function Hero() {
             </Link>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-12 md:gap-20 max-w-4xl mx-auto pt-12 border-t border-[#404040]">
+          <div className="flex flex-wrap justify-center gap-12 md:gap-20 max-w-4xl mx-auto pt-12 pb-20 border-t border-[#404040]">
             <div className="flex flex-col items-center">
               <div className="text-4xl md:text-5xl font-bold text-[#1E97D4] mb-3">
                 <Counter end={15} suffix="+" animateOnMount={true} />
