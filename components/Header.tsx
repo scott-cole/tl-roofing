@@ -16,7 +16,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-[#222222] shadow-md border-b border-[#333333]">
+    <header className="sticky top-0 z-50 bg-[#292929] shadow-md border-b border-[#404040]">
       <nav className="container py-5">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-4 group">

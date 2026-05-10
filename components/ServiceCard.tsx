@@ -10,7 +10,7 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ title, description, icon, href }: ServiceCardProps) {
   return (
-    <div className="bg-[#2a2a2a] rounded-2xl shadow-lg p-10 card-hover border border-[#333333] group">
+    <div className="bg-[#404040] rounded-2xl shadow-lg p-10 card-hover border border-[#404040] group">
       <div className="w-16 h-16 bg-[#1E97D4]/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#1E97D4]/20 transition-all duration-300 group-hover:scale-110">
         <div className="text-[#1E97D4]">{icon}</div>
       </div>

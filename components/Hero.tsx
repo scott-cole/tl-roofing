@@ -4,7 +4,7 @@ import { ArrowRight, Shield, Clock, Award, CheckCircle, Phone } from "lucide-rea
 
 export default function Hero() {
   return (
-    <section className="relative bg-[#222222] text-white overflow-hidden">
+    <section className="relative bg-[#292929] text-white overflow-hidden">
       <div className="absolute inset-0">
         <Image
           src="/images/roof1.jpg"
@@ -14,7 +14,7 @@ export default function Hero() {
           priority
         />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-br from-[#222222] via-[#222222]/95 to-[#222222]/90"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#292929] via-[#292929]/95 to-[#292929]/90"></div>
       <div className="container relative z-10">
         <div className="max-w-5xl mx-auto text-center py-20 lg:py-32">
           <div className="relative w-48 h-48 mx-auto mb-8">
@@ -56,7 +56,7 @@ export default function Hero() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-3 gap-12 max-w-2xl mx-auto pt-12 border-t border-[#333333]">
+          <div className="grid grid-cols-3 gap-12 max-w-2xl mx-auto pt-12 border-t border-[#404040]">
             <div>
               <div className="text-5xl font-bold text-[#1E97D4] mb-2">15+</div>
               <div className="text-sm text-gray-400">Years Experience</div>

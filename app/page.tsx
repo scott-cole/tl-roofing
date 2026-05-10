@@ -84,7 +84,7 @@ export default function Home() {
     <>
       <Hero />
 
-      <section className="py-24 bg-[#222222]">
+      <section className="py-24 bg-[#292929]">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">
@@ -113,7 +113,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 bg-[#2a2a2a]">
+      <section className="py-24 bg-[#404040]">
         <div className="container">
           <div className="max-w-6xl mx-auto">
             <div className="section-header">
@@ -125,7 +125,7 @@ export default function Home() {
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className="bg-[#333333] rounded-2xl p-10 card-hover border border-[#444444]"
+                  className="bg-[#404040] rounded-2xl p-10 card-hover border border-[#4a4a4a]"
                 >
                   <div className="w-16 h-16 bg-[#1E97D4]/10 rounded-xl flex items-center justify-center mb-6">
                     <div className="text-[#1E97D4]">{benefit.icon}</div>
@@ -146,7 +146,7 @@ export default function Home() {
       <Testimonials />
       <ContactForm />
 
-      <section className="py-24 bg-[#2a2a2a] text-center">
+      <section className="py-24 bg-[#404040] text-center">
         <div className="container">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Ready to Get Started?

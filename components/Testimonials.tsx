@@ -26,7 +26,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-24 bg-[#2a2a2a]">
+    <section className="py-24 bg-[#404040]">
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">
@@ -41,7 +41,7 @@ export default function Testimonials() {
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="bg-[#333333] rounded-2xl shadow-lg p-10 relative card-hover border border-[#444444]"
+              className="bg-[#404040] rounded-2xl shadow-lg p-10 relative card-hover border border-[#4a4a4a]"
             >
               <Quote className="absolute top-8 right-8 w-12 h-12 text-[#1E97D4]/20" />
               <div className="flex items-center space-x-1 mb-6">
@@ -50,7 +50,7 @@ export default function Testimonials() {
                 ))}
               </div>
               <p className="text-gray-300 mb-8 italic leading-relaxed text-lg">"{review.text}"</p>
-              <div className="flex items-center justify-between pt-6 border-t border-[#444444]">
+              <div className="flex items-center justify-between pt-6 border-t border-[#4a4a4a]">
                 <div>
                   <p className="font-bold text-white text-lg">{review.name}</p>
                   <p className="text-sm text-gray-400">{review.location}</p>
@@ -62,7 +62,7 @@ export default function Testimonials() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <div className="bg-[#333333] rounded-2xl shadow-lg p-12 text-center card-hover border-2 border-[#1E97D4]">
+          <div className="bg-[#404040] rounded-2xl shadow-lg p-12 text-center card-hover border-2 border-[#1E97D4]">
             <div className="text-7xl mb-8">⭐</div>
             <h3 className="text-3xl font-bold text-white mb-4">5-Star Rated</h3>
             <p className="text-gray-400 mb-8 text-lg leading-relaxed">
@@ -76,7 +76,7 @@ export default function Testimonials() {
             <p className="text-sm text-gray-500">Based on customer reviews</p>
           </div>
 
-          <div className="bg-[#333333] rounded-2xl shadow-lg p-12 text-center card-hover border-2 border-[#1E97D4]">
+          <div className="bg-[#404040] rounded-2xl shadow-lg p-12 text-center card-hover border-2 border-[#1E97D4]">
             <div className="text-7xl mb-8">✓</div>
             <h3 className="text-3xl font-bold text-white mb-4">Excellent</h3>
             <p className="text-gray-400 mb-8 text-lg leading-relaxed">

@@ -25,7 +25,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="py-24 bg-[#222222]">
+    <section className="py-24 bg-[#292929]">
       <div className="container">
         <div className="max-w-6xl mx-auto">
           <div className="section-header">
@@ -86,7 +86,7 @@ export default function ContactForm() {
                 </div>
               </div>
 
-              <div className="bg-[#2a2a2a] rounded-2xl p-8 border border-[#333333]">
+              <div className="bg-[#404040] rounded-2xl p-8 border border-[#404040]">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-[#1E97D4] flex-shrink-0" />
@@ -108,7 +108,7 @@ export default function ContactForm() {
               </div>
             </div>
 
-            <div className="bg-[#2a2a2a] rounded-2xl p-10 shadow-lg border border-[#333333]">
+            <div className="bg-[#404040] rounded-2xl p-10 shadow-lg border border-[#404040]">
               <h3 className="text-2xl font-bold text-white mb-8">Send Us a Message</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -122,7 +122,7 @@ export default function ContactForm() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-5 py-4 bg-[#222222] border border-[#333333] rounded-xl focus:ring-2 focus:ring-[#1E97D4] focus:border-transparent transition-all text-white placeholder-gray-500"
+                    className="w-full px-5 py-4 bg-[#292929] border border-[#404040] rounded-xl focus:ring-2 focus:ring-[#1E97D4] focus:border-transparent transition-all text-white placeholder-gray-500"
                     placeholder="Your name"
                   />
                 </div>
@@ -138,7 +138,7 @@ export default function ContactForm() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-5 py-4 bg-[#222222] border border-[#333333] rounded-xl focus:ring-2 focus:ring-[#1E97D4] focus:border-transparent transition-all text-white placeholder-gray-500"
+                    className="w-full px-5 py-4 bg-[#292929] border border-[#404040] rounded-xl focus:ring-2 focus:ring-[#1E97D4] focus:border-transparent transition-all text-white placeholder-gray-500"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -153,7 +153,7 @@ export default function ContactForm() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-5 py-4 bg-[#222222] border border-[#333333] rounded-xl focus:ring-2 focus:ring-[#1E97D4] focus:border-transparent transition-all text-white placeholder-gray-500"
+                    className="w-full px-5 py-4 bg-[#292929] border border-[#404040] rounded-xl focus:ring-2 focus:ring-[#1E97D4] focus:border-transparent transition-all text-white placeholder-gray-500"
                     placeholder="07700 900000"
                   />
                 </div>
@@ -169,7 +169,7 @@ export default function ContactForm() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={5}
-                    className="w-full px-5 py-4 bg-[#222222] border border-[#333333] rounded-xl focus:ring-2 focus:ring-[#1E97D4] focus:border-transparent transition-all resize-none text-white placeholder-gray-500"
+                    className="w-full px-5 py-4 bg-[#292929] border border-[#404040] rounded-xl focus:ring-2 focus:ring-[#1E97D4] focus:border-transparent transition-all resize-none text-white placeholder-gray-500"
                     placeholder="Tell us about your roofing needs..."
                   />
                 </div>

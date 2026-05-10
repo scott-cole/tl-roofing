@@ -6,7 +6,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#2a2a2a] text-white">
+    <footer className="bg-[#404040] text-white">
       <div className="container py-20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-2">
@@ -114,7 +114,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-[#333333] mt-16 pt-8 text-center text-gray-500">
+        <div className="border-t border-[#404040] mt-16 pt-8 text-center text-gray-500">
           <p>&copy; {currentYear} T & L Roofing. All rights reserved.</p>
         </div>
       </div>
