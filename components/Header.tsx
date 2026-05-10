@@ -37,6 +37,7 @@ export default function Header() {
   ];
 
   return (
+    <>
     <header
       className={cn(
         "sticky top-0 z-50 bg-[#292929] border-b border-[#404040] transition-all duration-300",
@@ -101,40 +102,40 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu - Full Screen */}
-        {isMenuOpen && (
-          <div className="lg:hidden fixed inset-0 top-[73px] bg-[#1a1a1a] z-40 flex flex-col overflow-y-auto">
-            <div className="flex flex-col gap-6 py-8 px-6 flex-1">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-gray-300 hover:text-[#1E97D4] transition-colors font-semibold text-lg py-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <div className="border-t border-white/20 my-2 pt-6">
-                <a
-                  href="tel:07936450711"
-                  className="flex items-center gap-3 text-white hover:text-[#1E97D4] transition-colors py-3 font-semibold text-lg"
-                >
-                  <Phone className="w-5 h-5 text-[#1E97D4]" />
-                  <span>07936 450711</span>
-                </a>
-              </div>
-              <Link
-                href="/contact"
-                className="bg-[#1E97D4] hover:bg-[#0d7ab8] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 text-center text-lg mt-4"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Get Quote
-              </Link>
-            </div>
-          </div>
-        )}
       </nav>
     </header>
+    {isMenuOpen && (
+      <div className="fixed inset-0 top-[73px] bg-[#1a1a1a] z-40 flex flex-col overflow-y-auto">
+        <div className="flex flex-col gap-6 py-8 px-6 flex-1">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-gray-300 hover:text-[#1E97D4] transition-colors font-semibold text-lg py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <div className="border-t border-white/20 my-2 pt-6">
+            <a
+              href="tel:07936450711"
+              className="flex items-center gap-3 text-white hover:text-[#1E97D4] transition-colors py-3 font-semibold text-lg"
+            >
+              <Phone className="w-5 h-5 text-[#1E97D4]" />
+              <span>07936 450711</span>
+            </a>
+          </div>
+          <Link
+            href="/contact"
+            className="bg-[#1E97D4] hover:bg-[#0d7ab8] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 text-center text-lg mt-4"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Get Quote
+          </Link>
+        </div>
+      </div>
+    )}
+    </>
   );
 }
