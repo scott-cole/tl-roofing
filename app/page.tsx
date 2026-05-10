@@ -178,7 +178,7 @@ export default function Home() {
         </Link>
       </div>
 
-      <Testimonials />
+      {/* <Testimonials /> */}
       <ContactForm />
 
       <ScrollReveal>
@@ -236,9 +236,9 @@ export default function Home() {
             Ready to Get Started?
           </h2>
           <p className="text-xl mb-10 text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Contact T &amp; L Roofing today for a free, no-obligation quote. We&rsquo;re
-            here to help with all your roofing needs in Leeds and West
-            Yorkshire.
+            Contact T &amp; L Roofing today for a free, no-obligation quote.
+            We&rsquo;re here to help with all your roofing needs in Leeds and
+            West Yorkshire.
           </p>
           <Link href="/contact" className="btn-primary inline-block">
             Get Your Free Quote

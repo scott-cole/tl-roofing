@@ -59,14 +59,14 @@ export default function Header() {
           </div>
 
           {/* Right Section - Phone & CTA */}
-          <div className="hidden md:flex items-center gap-6">
-            <a
-              href="tel:07936450711"
-              className="flex items-center gap-2 text-white hover:text-[#1E97D4] transition-colors group"
-            >
-              <Phone className="w-4 h-4 text-[#1E97D4]" />
-              <span className="text-sm font-semibold">07936 450711</span>
-            </a>
+          <div className="hidden md:flex items-center gap-3 lg:gap-6">
+            <div className="flex items-center gap-2">
+              <Phone className="w-5 h-5 text-[#1E97D4] shrink-0" />
+              <div className="flex flex-col leading-tight">
+                <a href="tel:07936450711" className="text-sm font-semibold whitespace-nowrap text-white hover:text-[#1E97D4] transition-colors">07936 450711</a>
+                <a href="tel:07791746045" className="text-sm font-semibold whitespace-nowrap text-white hover:text-[#1E97D4] transition-colors">07791 746045</a>
+              </div>
+            </div>
             <div className="w-px h-6 bg-white/20"></div>
             <Link
               href="/contact"
@@ -104,13 +104,20 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
-              <div className="border-t border-white/20 my-2 pt-6">
+              <div className="border-t border-white/20 my-2 pt-6 space-y-1">
                 <a
                   href="tel:07936450711"
-                  className="flex items-center gap-3 text-white hover:text-[#1E97D4] transition-colors py-3 font-semibold text-lg"
+                  className="flex items-center gap-3 text-white hover:text-[#1E97D4] transition-colors py-2 font-semibold text-lg"
                 >
                   <Phone className="w-5 h-5 text-[#1E97D4]" />
                   <span>07936 450711</span>
+                </a>
+                <a
+                  href="tel:07791746045"
+                  className="flex items-center gap-3 text-white hover:text-[#1E97D4] transition-colors py-2 font-semibold text-lg"
+                >
+                  <Phone className="w-5 h-5 text-[#1E97D4]" />
+                  <span>07791 746045</span>
                 </a>
               </div>
               <Link
