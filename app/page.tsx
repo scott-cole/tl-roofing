@@ -95,7 +95,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-wrap justify-center gap-8">
             {services.map((service, index) => (
               <ServiceCard key={index} {...service} />
             ))}
@@ -121,11 +121,11 @@ export default function Home() {
                 Why Choose T & L Roofing?
               </h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="flex flex-wrap justify-center gap-8">
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className="bg-[#404040] rounded-2xl p-10 card-hover border border-[#4a4a4a]"
+                  className="bg-[#404040] rounded-2xl p-10 card-hover border border-[#4a4a4a] flex-1 min-w-[300px]"
                 >
                   <div className="w-16 h-16 bg-[#1E97D4]/10 rounded-xl flex items-center justify-center mb-6">
                     <div className="text-[#1E97D4]">{benefit.icon}</div>

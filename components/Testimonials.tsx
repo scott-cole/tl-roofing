@@ -37,11 +37,11 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-24">
+        <div className="flex flex-wrap justify-center gap-12 mb-24">
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="bg-[#404040] rounded-2xl shadow-lg p-12 relative card-hover border border-[#4a4a4a]"
+              className="bg-[#404040] rounded-2xl shadow-lg p-12 relative card-hover border border-[#4a4a4a] flex-1 min-w-[300px] max-w-[400px]"
             >
               <Quote className="absolute top-10 right-10 w-14 h-14 text-[#1E97D4]/20" />
               <div className="flex items-center space-x-1 mb-8">
@@ -61,8 +61,8 @@ export default function Testimonials() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          <div className="bg-[#404040] rounded-2xl shadow-lg p-16 text-center card-hover border-2 border-[#1E97D4]">
+        <div className="flex flex-wrap justify-center gap-12 max-w-5xl mx-auto">
+          <div className="bg-[#404040] rounded-2xl shadow-lg p-16 text-center card-hover border-2 border-[#1E97D4] flex-1 min-w-[300px]">
             <div className="text-8xl mb-10">⭐</div>
             <h3 className="text-4xl font-bold text-white mb-6">5-Star Rated</h3>
             <p className="text-gray-400 mb-10 text-xl leading-relaxed">
@@ -76,7 +76,7 @@ export default function Testimonials() {
             <p className="text-sm text-gray-500">Based on customer reviews</p>
           </div>
 
-          <div className="bg-[#404040] rounded-2xl shadow-lg p-16 text-center card-hover border-2 border-[#1E97D4]">
+          <div className="bg-[#404040] rounded-2xl shadow-lg p-16 text-center card-hover border-2 border-[#1E97D4] flex-1 min-w-[300px]">
             <div className="text-8xl mb-10">✓</div>
             <h3 className="text-4xl font-bold text-white mb-6">Excellent</h3>
             <p className="text-gray-400 mb-10 text-xl leading-relaxed">

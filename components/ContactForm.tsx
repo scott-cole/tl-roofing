@@ -38,8 +38,8 @@ export default function ContactForm() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div className="space-y-12">
+          <div className="flex flex-wrap lg:flex-nowrap gap-16">
+            <div className="space-y-12 flex-1 min-w-[300px]">
               <div className="flex items-start space-x-8">
                 <div className="w-20 h-20 bg-[#1E97D4]/10 rounded-xl flex items-center justify-center flex-shrink-0">
                   <Phone className="w-10 h-10 text-[#1E97D4]" />
@@ -87,7 +87,7 @@ export default function ContactForm() {
               </div>
 
               <div className="bg-[#333333] rounded-2xl p-10 border border-[#404040]">
-                <div className="grid grid-cols-2 gap-8">
+                <div className="flex flex-wrap gap-8 justify-center">
                   <div className="flex items-center space-x-4">
                     <CheckCircle className="w-6 h-6 text-[#1E97D4] flex-shrink-0" />
                     <span className="text-base font-medium text-gray-300">Free Quotes</span>
@@ -108,7 +108,7 @@ export default function ContactForm() {
               </div>
             </div>
 
-            <div className="bg-[#333333] rounded-2xl p-14 shadow-lg border border-[#404040]">
+            <div className="bg-[#333333] rounded-2xl p-14 shadow-lg border border-[#404040] flex-1 min-w-[300px]">
               <h3 className="text-3xl font-bold text-white mb-10">Send Us a Message</h3>
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div>

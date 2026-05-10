@@ -85,9 +85,9 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-20 border-t-2 border-gray-100">
+            <div className="flex flex-wrap justify-center gap-8 mt-20 pt-20 border-t-2 border-gray-100">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
+                <div key={index} className="text-center flex-1 min-w-[150px]">
                   <div className="text-5xl md:text-6xl font-bold text-primary mb-2">
                     {stat.value}
                   </div>
@@ -105,11 +105,11 @@ export default function AboutPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-16 text-center">
               Our Values
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="flex flex-wrap justify-center gap-8">
               {values.map((value, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-2xl p-8 shadow-lg card-hover"
+                  className="bg-white rounded-2xl p-8 shadow-lg card-hover flex-1 min-w-[300px]"
                 >
                   <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
                     {value.icon}
