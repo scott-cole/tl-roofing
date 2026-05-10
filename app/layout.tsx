@@ -7,6 +7,7 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import ReviewSchema from "@/components/ReviewSchema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -100,6 +101,7 @@ export default function RootLayout({
         <main className="flex-grow">{children}</main>
         <Footer />
         <WhatsAppButton />
+        <Analytics />
       </body>
     </html>
   );
