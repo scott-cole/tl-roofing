@@ -126,7 +126,7 @@ export default function Home() {
         <div className="container">
           <div className="max-w-6xl mx-auto">
             <div className="section-header">
-              <h2 className="section-title">Why Choose T & L Roofing?</h2>
+              <h2 className="section-title">Why Choose TL Roofing?</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (

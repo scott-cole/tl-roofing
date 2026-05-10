@@ -17,7 +17,7 @@ export default function ContactPage() {
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
+            <h2 className="text-4xl font-bold text-white mb-12 text-center">
               Frequently Asked Questions
             </h2>
             <div className="space-y-6 text-left">
@@ -76,7 +76,7 @@ export default function ContactPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:01130000000"
+              href="tel:07936450711"
               className="btn-primary inline-flex items-center justify-center"
             >
               Call Us Now

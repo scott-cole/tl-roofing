@@ -11,8 +11,10 @@ import {
 
 export const metadata: Metadata = {
   title: "Roofing Services in Leeds & West Yorkshire | T & L Roofing",
-  description: "Complete roofing services in Leeds and West Yorkshire. Expert roof repairs, replacements, installations, gutters, inspections, and 24/7 emergency services.",
-  keywords: "roofing services Leeds, roof repairs, roof replacement, roof installation, gutter services, roof inspections, emergency roofing",
+  description:
+    "Complete roofing services in Leeds and West Yorkshire. Expert roof repairs, replacements, installations, gutters, inspections, and 24/7 emergency services.",
+  keywords:
+    "roofing services Leeds, roof repairs, roof replacement, roof installation, gutter services, roof inspections, emergency roofing",
 };
 
 export default function ServicesPage() {
@@ -113,10 +115,12 @@ export default function ServicesPage() {
     <>
       <section className="bg-gradient-to-br from-secondary to-secondary-light text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Roofing Services</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            Our Roofing Services
+          </h1>
           <p className="text-xl max-w-3xl mx-auto text-gray-300">
-            Comprehensive roofing solutions for homes and businesses in Leeds and
-            West Yorkshire
+            Comprehensive roofing solutions for homes and businesses in Leeds
+            and West Yorkshire
           </p>
         </div>
       </section>
@@ -125,41 +129,39 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4">
           <div className="space-y-20">
             {services.map((service) => (
-              <div
-                key={service.id}
-                id={service.id}
-                className="scroll-mt-24"
-              >
+              <div key={service.id} id={service.id} className="scroll-mt-24">
                 <div className="flex flex-col lg:flex-row gap-12 items-start">
                   <div className="flex-1 min-w-[300px]">
                     <div className="flex items-center space-x-4 mb-6">
                       <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
                         {service.icon}
                       </div>
-                      <h2 className="text-3xl font-bold text-gray-900">
+                      <h2 className="text-3xl font-bold text-[#1E97D4]">
                         {service.title}
                       </h2>
                     </div>
                     <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                       {service.description}
                     </p>
-                    <h3 className="text-xl font-bold text-gray-900 mb-6">
+                    <h3 className="text-xl font-bold text-[#1E97D4] mb-6">
                       What's Included:
                     </h3>
                     <ul className="space-y-4">
                       {service.features.map((feature, index) => (
                         <li key={index} className="flex items-start space-x-3">
                           <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-700 leading-relaxed">{feature}</span>
+                          <span className="text-gray-600 leading-relaxed">
+                            {feature}
+                          </span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div className="bg-muted rounded-2xl p-8 shadow-lg flex-1 min-w-[300px]">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                    <h3 className="text-2xl font-bold text-[#1E97D4] mb-6">
                       Need {service.title}?
                     </h3>
-                    <p className="text-gray-600 mb-8 leading-relaxed">
+                    <p className="text-white mb-8 leading-relaxed">
                       Contact T & L Roofing for a free quote on{" "}
                       {service.title.toLowerCase()}. Our team is ready to help
                       with your roofing needs in Leeds and West Yorkshire.
@@ -171,8 +173,10 @@ export default function ServicesPage() {
                       Get Free Quote
                     </a>
                     <div className="mt-8 pt-8 border-t border-gray-200">
-                      <p className="text-sm text-gray-500">
-                        <strong className="text-gray-900">Service Area:</strong>{" "}
+                      <p className="text-sm text-gray-400">
+                        <strong className="text-[#1E97D4]">
+                          Service Area:
+                        </strong>{" "}
                         Leeds, West Yorkshire, and surrounding areas
                       </p>
                     </div>
@@ -186,17 +190,14 @@ export default function ServicesPage() {
 
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-[#1E97D4] mb-4">
             Can't Find What You Need?
           </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            We offer custom roofing solutions. Contact us to discuss your specific
-            requirements.
+          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
+            We offer custom roofing solutions. Contact us to discuss your
+            specific requirements.
           </p>
-          <a
-            href="/contact"
-            className="btn-primary inline-block"
-          >
+          <a href="/contact" className="btn-primary inline-block">
             Contact Us Today
           </a>
         </div>

@@ -1,10 +1,19 @@
 import { Metadata } from "next";
-import { Users, Target, Award, Shield, Clock, HeartHandshake } from "lucide-react";
+import {
+  Users,
+  Target,
+  Award,
+  Shield,
+  Clock,
+  HeartHandshake,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About T & L Roofing | Professional Roofers in Leeds",
-  description: "Learn about T & L Roofing, your trusted roofing experts in Leeds and West Yorkshire. Quality workmanship, reliable service, and customer satisfaction guaranteed.",
-  keywords: "T & L Roofing, about us, roofing company Leeds, professional roofers",
+  description:
+    "Learn about T & L Roofing, your trusted roofing experts in Leeds and West Yorkshire. Quality workmanship, reliable service, and customer satisfaction guaranteed.",
+  keywords:
+    "T & L Roofing, about us, roofing company Leeds, professional roofers",
 };
 
 export default function AboutPage() {
@@ -46,7 +55,9 @@ export default function AboutPage() {
     <>
       <section className="bg-gradient-to-br from-secondary to-secondary-light text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">About T & L Roofing</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            About T & L Roofing
+          </h1>
           <p className="text-xl max-w-3xl mx-auto text-gray-300">
             Your trusted roofing experts in Leeds and West Yorkshire
           </p>
@@ -91,7 +102,9 @@ export default function AboutPage() {
                   <div className="text-5xl md:text-6xl font-bold text-primary mb-2">
                     {stat.value}
                   </div>
-                  <div className="text-gray-600 font-medium text-lg">{stat.label}</div>
+                  <div className="text-gray-600 font-medium text-lg">
+                    {stat.label}
+                  </div>
                 </div>
               ))}
             </div>
@@ -102,7 +115,7 @@ export default function AboutPage() {
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-16 text-center">
+            <h2 className="text-4xl font-bold text-white mb-16 text-center">
               Our Values
             </h2>
             <div className="flex flex-wrap justify-center gap-8">
@@ -117,7 +130,9 @@ export default function AboutPage() {
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">
                     {value.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                  <p className="text-gray-600 leading-relaxed">
+                    {value.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -198,17 +213,12 @@ export default function AboutPage() {
 
       <section className="py-20 bg-secondary text-white text-center">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready to Work With Us?
-          </h2>
+          <h2 className="text-4xl font-bold mb-6">Ready to Work With Us?</h2>
           <p className="text-xl mb-8 text-gray-300 max-w-2xl mx-auto leading-relaxed">
             Contact T & L Roofing today to discuss your project. We're here to
             help with all your roofing needs in Leeds and West Yorkshire.
           </p>
-          <a
-            href="/contact"
-            className="btn-primary inline-block"
-          >
+          <a href="/contact" className="btn-primary inline-block">
             Get in Touch
           </a>
         </div>

@@ -12,8 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title:
-    "T & L Roofing | Professional Roofing Services in Leeds & West Yorkshire",
+  title: "TL Roofing | Professional Roofing Services in Leeds & West Yorkshire",
   description:
     "Expert roofing services in Leeds and West Yorkshire. Professional roof repairs, replacements, installations, and emergency services. Trusted local roofers with quality workmanship.",
   keywords:
@@ -26,29 +25,29 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://tlroofing.co.uk"),
+  metadataBase: new URL("https://tl-roofing.co.uk"),
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: "https://tlroofing.co.uk",
+    url: "https://tl-roofing.co.uk",
     title:
-      "T & L Roofing | Professional Roofing Services in Leeds & West Yorkshire",
+      "TL Roofing | Professional Roofing Services in Leeds & West Yorkshire",
     description:
       "Expert roofing services in Leeds and West Yorkshire. Professional roof repairs, replacements, installations, and emergency services.",
-    siteName: "T & L Roofing",
+    siteName: "TL Roofing",
     images: [
       {
         url: "/tl-logo-favicon.png",
         width: 1000,
         height: 1000,
-        alt: "T & L Roofing Logo",
+        alt: "TL Roofing Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "T & L Roofing | Professional Roofing Services in Leeds & West Yorkshire",
+      "TL Roofing | Professional Roofing Services in Leeds & West Yorkshire",
     description:
       "Expert roofing services in Leeds and West Yorkshire. Professional roof repairs, replacements, installations, and emergency services.",
     images: ["/tl-logo-favicon.png"],
