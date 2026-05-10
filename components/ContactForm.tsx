@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, Clock, Shield, CheckCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -25,14 +25,14 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="py-24 bg-[#222222]">
+      <div className="container">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <div className="section-header">
+            <h2 className="section-title">
               Get in Touch
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="section-subtitle">
               Ready to discuss your roofing needs? Contact us today for a free,
               no-obligation quote.
             </p>
@@ -40,45 +40,45 @@ export default function ContactForm() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="space-y-8">
-              <div className="flex items-start space-x-4">
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-7 h-7 text-primary" />
+              <div className="flex items-start space-x-6">
+                <div className="w-16 h-16 bg-[#1E97D4]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-8 h-8 text-[#1E97D4]" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Phone</h3>
+                  <h3 className="text-2xl font-bold text-white mb-3">Phone</h3>
                   <a
                     href="tel:01130000000"
-                    className="text-2xl font-bold text-primary hover:text-primary-dark transition-colors"
+                    className="text-2xl font-bold text-[#1E97D4] hover:text-white transition-colors"
                   >
                     0113 000 0000
                   </a>
-                  <p className="text-gray-500 mt-2">Mon-Fri: 8am-6pm, Sat: 9am-2pm</p>
+                  <p className="text-gray-400 mt-2">Mon-Fri: 8am-6pm, Sat: 9am-2pm</p>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-7 h-7 text-primary" />
+              <div className="flex items-start space-x-6">
+                <div className="w-16 h-16 bg-[#1E97D4]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-8 h-8 text-[#1E97D4]" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>
+                  <h3 className="text-2xl font-bold text-white mb-3">Email</h3>
                   <a
                     href="mailto:tl.roofing@outlook.com"
-                    className="text-xl font-semibold text-primary hover:text-primary-dark transition-colors"
+                    className="text-xl font-semibold text-[#1E97D4] hover:text-white transition-colors"
                   >
                     tl.roofing@outlook.com
                   </a>
-                  <p className="text-gray-500 mt-2">We respond within 24 hours</p>
+                  <p className="text-gray-400 mt-2">We respond within 24 hours</p>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-7 h-7 text-primary" />
+              <div className="flex items-start space-x-6">
+                <div className="w-16 h-16 bg-[#1E97D4]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-8 h-8 text-[#1E97D4]" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Service Area</h3>
-                  <p className="text-gray-700 text-lg">
+                  <h3 className="text-2xl font-bold text-white mb-3">Service Area</h3>
+                  <p className="text-gray-400 text-lg leading-relaxed">
                     Leeds, West Yorkshire<br />
                     United Kingdom
                   </p>
@@ -86,33 +86,33 @@ export default function ContactForm() {
                 </div>
               </div>
 
-              <div className="bg-primary/5 rounded-2xl p-6 mt-8">
-                <div className="grid grid-cols-2 gap-4">
+              <div className="bg-[#2a2a2a] rounded-2xl p-8 border border-[#333333]">
+                <div className="grid grid-cols-2 gap-6">
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span className="text-sm font-medium text-gray-700">Free Quotes</span>
+                    <CheckCircle className="w-5 h-5 text-[#1E97D4] flex-shrink-0" />
+                    <span className="text-sm font-medium text-gray-300">Free Quotes</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span className="text-sm font-medium text-gray-700">24/7 Emergency</span>
+                    <CheckCircle className="w-5 h-5 text-[#1E97D4] flex-shrink-0" />
+                    <span className="text-sm font-medium text-gray-300">24/7 Emergency</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span className="text-sm font-medium text-gray-700">Fully Insured</span>
+                    <CheckCircle className="w-5 h-5 text-[#1E97D4] flex-shrink-0" />
+                    <span className="text-sm font-medium text-gray-300">Fully Insured</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span className="text-sm font-medium text-gray-700">Quality Work</span>
+                    <CheckCircle className="w-5 h-5 text-[#1E97D4] flex-shrink-0" />
+                    <span className="text-sm font-medium text-gray-300">Quality Work</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-muted rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
-              <form onSubmit={handleSubmit} className="space-y-5">
+            <div className="bg-[#2a2a2a] rounded-2xl p-10 shadow-lg border border-[#333333]">
+              <h3 className="text-2xl font-bold text-white mb-8">Send Us a Message</h3>
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-semibold text-gray-300 mb-3">
                     Full Name *
                   </label>
                   <input
@@ -122,13 +122,13 @@ export default function ContactForm() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                    className="w-full px-5 py-4 bg-[#222222] border border-[#333333] rounded-xl focus:ring-2 focus:ring-[#1E97D4] focus:border-transparent transition-all text-white placeholder-gray-500"
                     placeholder="Your name"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-semibold text-gray-300 mb-3">
                     Email Address *
                   </label>
                   <input
@@ -138,13 +138,13 @@ export default function ContactForm() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                    className="w-full px-5 py-4 bg-[#222222] border border-[#333333] rounded-xl focus:ring-2 focus:ring-[#1E97D4] focus:border-transparent transition-all text-white placeholder-gray-500"
                     placeholder="your@email.com"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="phone" className="block text-sm font-semibold text-gray-300 mb-3">
                     Phone Number
                   </label>
                   <input
@@ -153,13 +153,13 @@ export default function ContactForm() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                    className="w-full px-5 py-4 bg-[#222222] border border-[#333333] rounded-xl focus:ring-2 focus:ring-[#1E97D4] focus:border-transparent transition-all text-white placeholder-gray-500"
                     placeholder="07700 900000"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-semibold text-gray-300 mb-3">
                     Message *
                   </label>
                   <textarea
@@ -168,8 +168,8 @@ export default function ContactForm() {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
+                    rows={5}
+                    className="w-full px-5 py-4 bg-[#222222] border border-[#333333] rounded-xl focus:ring-2 focus:ring-[#1E97D4] focus:border-transparent transition-all resize-none text-white placeholder-gray-500"
                     placeholder="Tell us about your roofing needs..."
                   />
                 </div>

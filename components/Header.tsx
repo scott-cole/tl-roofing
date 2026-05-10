@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function Header() {
@@ -17,60 +16,50 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-lg border-b-4 border-primary">
-      <nav className="container mx-auto px-4 py-4">
+    <header className="sticky top-0 z-50 bg-[#222222] shadow-md border-b border-[#333333]">
+      <nav className="container py-5">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-3 group">
-            <div className="relative w-16 h-16">
-              <Image
-                src="/tl-logo.png"
-                alt="T & L Roofing Logo"
-                fill
-                className="object-contain transition-transform group-hover:scale-105"
-                priority
-              />
-            </div>
+          <Link href="/" className="flex items-center space-x-4 group">
             <div className="hidden sm:block">
-              <span className="text-2xl font-bold text-secondary">T & L Roofing</span>
-              <p className="text-xs text-primary font-medium">Professional Roofing Services</p>
+              <span className="text-2xl font-bold text-white group-hover:text-[#1E97D4] transition-colors">T & L Roofing</span>
             </div>
           </Link>
 
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-10">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-gray-700 hover:text-primary transition-colors font-medium text-sm uppercase tracking-wide relative group"
+                className="text-gray-300 hover:text-[#1E97D4] transition-colors font-medium text-sm uppercase tracking-wide relative group"
               >
                 {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1E97D4] transition-all group-hover:w-full"></span>
               </Link>
             ))}
           </div>
 
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-6">
             <a
               href="tel:01130000000"
-              className="flex items-center space-x-2 text-gray-700 hover:text-primary transition-colors font-semibold"
+              className="flex items-center space-x-2 text-white hover:text-[#1E97D4] transition-colors font-semibold"
             >
               <Phone className="w-5 h-5" />
-              <span className="text-lg">0113 000 0000</span>
+              <span className="text-base">0113 000 0000</span>
             </a>
             <Link
               href="/contact"
-              className="btn-primary text-white flex items-center space-x-2"
+              className="bg-[#1E97D4] hover:bg-[#0d7ab8] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
             >
-              <span>Get Quote</span>
+              Get Quote
             </Link>
           </div>
 
           <button
-            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className="lg:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X className="w-7 h-7 text-primary" /> : <Menu className="w-7 h-7 text-secondary" />}
+            {isMenuOpen ? <X className="w-7 h-7 text-white" /> : <Menu className="w-7 h-7 text-white" />}
           </button>
         </div>
 
@@ -80,12 +69,12 @@ export default function Header() {
             isMenuOpen ? "max-h-96 mt-4" : "max-h-0"
           )}
         >
-          <div className="flex flex-col space-y-4 py-4 border-t border-gray-200">
+          <div className="flex flex-col space-y-4 py-4 border-t border-white/20">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-gray-700 hover:text-primary transition-colors font-medium py-2 text-lg"
+                className="text-gray-300 hover:text-[#1E97D4] transition-colors font-medium py-2 text-lg"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}
@@ -93,14 +82,14 @@ export default function Header() {
             ))}
             <a
               href="tel:01130000000"
-              className="flex items-center space-x-2 text-secondary font-semibold text-lg py-2"
+              className="flex items-center space-x-2 text-white font-semibold text-lg py-2"
             >
-              <Phone className="w-5 h-5 text-primary" />
+              <Phone className="w-5 h-5 text-[#1E97D4]" />
               <span>0113 000 0000</span>
             </a>
             <Link
               href="/contact"
-              className="btn-primary text-white text-center py-4"
+              className="bg-[#1E97D4] hover:bg-[#0d7ab8] text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 text-center"
               onClick={() => setIsMenuOpen(false)}
             >
               Get a Free Quote

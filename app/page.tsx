@@ -84,13 +84,13 @@ export default function Home() {
     <>
       <Hero />
 
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+      <section className="py-24 bg-[#222222]">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title">
               Our Roofing Services
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="section-subtitle">
               Comprehensive roofing solutions for homes and businesses in Leeds and West Yorkshire
             </p>
           </div>
@@ -113,25 +113,27 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-muted">
-        <div className="container mx-auto px-4">
+      <section className="py-24 bg-[#2a2a2a]">
+        <div className="container">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-16 text-center">
-              Why Choose T & L Roofing?
-            </h2>
+            <div className="section-header">
+              <h2 className="section-title">
+                Why Choose T & L Roofing?
+              </h2>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-2xl p-8 shadow-lg card-hover"
+                  className="bg-[#333333] rounded-2xl p-10 card-hover border border-[#444444]"
                 >
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-                    <div className="text-primary">{benefit.icon}</div>
+                  <div className="w-16 h-16 bg-[#1E97D4]/10 rounded-xl flex items-center justify-center mb-6">
+                    <div className="text-[#1E97D4]">{benefit.icon}</div>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-2xl font-bold text-white mb-4">
                     {benefit.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-400 leading-relaxed">
                     {benefit.description}
                   </p>
                 </div>
@@ -144,12 +146,12 @@ export default function Home() {
       <Testimonials />
       <ContactForm />
 
-      <section className="py-20 bg-secondary text-white text-center">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+      <section className="py-24 bg-[#2a2a2a] text-center">
+        <div className="container">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Ready to Get Started?
           </h2>
-          <p className="text-xl mb-8 text-gray-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl mb-10 text-gray-400 max-w-2xl mx-auto leading-relaxed">
             Contact T & L Roofing today for a free, no-obligation quote. We're here
             to help with all your roofing needs in Leeds and West Yorkshire.
           </p>

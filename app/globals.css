@@ -1,19 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #1a1a1a;
+  --background: #222222;
+  --foreground: #ffffff;
   --primary: #1E97D4;
   --primary-hover: #0d7ab8;
-  --primary-light: #e3f2fd;
-  --primary-dark: #0a5a8c;
-  --secondary: #222222;
-  --secondary-hover: #333333;
-  --secondary-light: #444444;
-  --accent: #ffffff;
-  --muted: #f8f9fa;
-  --border: #e0e0e0;
-  --text-light: #666666;
+  --muted: #2a2a2a;
+  --border: #333333;
+  --text-light: #999999;
+  --text-muted: #666666;
+  --card-bg: #2a2a2a;
 }
 
 @theme inline {
@@ -21,15 +17,11 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-primary-hover: var(--primary-hover);
-  --color-primary-light: var(--primary-light);
-  --color-primary-dark: var(--primary-dark);
-  --color-secondary: var(--secondary);
-  --color-secondary-hover: var(--secondary-hover);
-  --color-secondary-light: var(--secondary-light);
-  --color-accent: var(--accent);
   --color-muted: var(--muted);
   --color-border: var(--border);
   --color-text-light: var(--text-light);
+  --color-text-muted: var(--text-muted);
+  --color-card-bg: var(--card-bg);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -63,29 +55,41 @@ html {
 }
 
 .btn-primary {
-  @apply bg-primary hover:bg-primary-hover text-white font-semibold py-4 px-8 rounded transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
+  @apply bg-[#1E97D4] hover:bg-[#0d7ab8] text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
 }
 
 .btn-secondary {
-  @apply bg-secondary hover:bg-secondary-hover text-white font-semibold py-4 px-8 rounded transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
+  @apply bg-[#333333] hover:bg-[#444444] text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
 }
 
 .btn-outline {
-  @apply border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-4 px-8 rounded transition-all duration-200;
+  @apply border-2 border-[#1E97D4] text-[#1E97D4] hover:bg-[#1E97D4] hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200;
 }
 
 section {
-  @apply py-16 md:py-24;
+  @apply py-24 md:py-32;
 }
 
 .container {
-  @apply mx-auto px-4 sm:px-6 lg:px-8;
+  @apply mx-auto px-6 sm:px-8 lg:px-12 max-w-7xl;
 }
 
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-dark;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#1E97D4] to-[#0d7ab8];
 }
 
 .card-hover {
-  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  @apply transition-all duration-300 hover:shadow-2xl hover:-translate-y-1;
+}
+
+.section-header {
+  @apply text-center mb-20;
+}
+
+.section-title {
+  @apply text-4xl md:text-5xl font-bold text-white mb-6;
+}
+
+.section-subtitle {
+  @apply text-xl text-gray-400 max-w-3xl mx-auto;
 }
