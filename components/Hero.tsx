@@ -16,8 +16,8 @@ export default function Hero() {
       </div>
       <div className="absolute inset-0 bg-gradient-to-br from-[#292929] via-[#292929]/95 to-[[#292929]/90"></div>
       <div className="container relative z-10">
-        <div className="max-w-5xl mx-auto text-center py-12 lg:py-20">
-          <div className="relative w-[350px] h-[350px] mx-auto mb-10">
+        <div className="flex flex-col items-center justify-center py-12 lg:py-20">
+          <div className="relative w-[350px] h-[350px] mb-10">
             <Image
               src="/tl-logo.png"
               alt="T & L Roofing Logo"
@@ -30,12 +30,12 @@ export default function Hero() {
             <CheckCircle className="w-5 h-5 text-[#1E97D4] mr-3" />
             <span className="text-sm font-medium uppercase tracking-wide">Serving Leeds & West Yorkshire</span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-center max-w-5xl">
             Professional{" "}
             <span className="text-[#1E97D4]">Roofing Services</span>
             {" "}You Can Trust
           </h1>
-          <p className="text-lg text-gray-400 leading-relaxed max-w-3xl mx-auto mb-10">
+          <p className="text-lg text-gray-400 leading-relaxed max-w-3xl mb-10 text-center">
             Expert roof repairs, replacements, and installations. Quality workmanship
             you can trust, with competitive prices and reliable service.
           </p>
