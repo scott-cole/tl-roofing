@@ -2,7 +2,15 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin, Star, Shield, Award, CheckCircle } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Star,
+  Shield,
+  Award,
+  CheckCircle,
+} from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -33,28 +41,6 @@ export default function Footer() {
               workmanship, reliable service, and competitive prices for all your
               roofing needs.
             </p>
-
-            <div className="mb-8">
-              <h4 className="text-lg font-bold mb-4">Trust Badges</h4>
-              <div className="flex flex-wrap gap-4">
-                <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/10">
-                  <Star className="w-5 h-5 text-yellow-400 fill-yellow-400" />
-                  <span className="text-sm">5-Star Rated</span>
-                </div>
-                <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/10">
-                  <Shield className="w-5 h-5 text-[#1E97D4]" />
-                  <span className="text-sm">Fully Insured</span>
-                </div>
-                <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/10">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-sm">Checkatrade</span>
-                </div>
-                <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg border border-white/10">
-                  <Award className="w-5 h-5 text-purple-400" />
-                  <span className="text-sm">Trustpilot</span>
-                </div>
-              </div>
-            </div>
 
             <div className="flex gap-3">
               <a

@@ -29,66 +29,56 @@ export default function Header() {
     <header
       className={cn(
         "sticky top-0 z-50 bg-[#292929] border-b border-[#404040] transition-all duration-300",
-        isScrolled
-          ? "shadow-xl backdrop-blur-md bg-[#292929]/95"
-          : "shadow-lg"
+        isScrolled ? "shadow-xl backdrop-blur-md bg-[#292929]/95" : "shadow-lg",
       )}
     >
-      <nav className="container py-2">
-        <div className="flex items-center justify-between gap-8">
-          <Link href="/" className="flex items-center shrink-0 group gap-2">
-            <div className="relative w-16 h-16 shrink-0">
-              <Image
-                src="/tl-logo.png"
-                alt="T & L Roofing Logo"
-                fill
-                className="object-contain"
-              />
-            </div>
-            <span className="text-2xl font-bold text-white">TL</span>
-            <span className="text-xl text-[#1E97D4]">Roofing Services</span>
-          </Link>
+      <nav className="mx-auto px-3 sm:px-4 lg:px-6 max-w-[1400px] py-4">
+        <div className="flex items-center justify-center relative">
+          {/* Logo/Branding - Left */}
+          <div className="absolute left-0">
+            <Link href="/" className="flex items-center shrink-0 group">
+              <span className="text-2xl font-bold text-[#1E97D4] tracking-tight">
+                T&L
+              </span>
+              <span className="text-sm text-gray-300 ml-2">Roofing</span>
+            </Link>
+          </div>
 
-          <div className="hidden lg:flex items-center gap-4">
+          {/* Center Navigation */}
+          <div className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-white hover:text-[#1E97D4] transition-all duration-300 font-semibold text-sm uppercase tracking-wide relative group py-2 px-3 whitespace-nowrap"
+                className="text-gray-300 hover:text-[#1E97D4] transition-colors font-semibold text-sm uppercase tracking-wide relative group"
               >
                 {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1E97D4] transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#1E97D4] transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
           </div>
 
-          <div className="hidden md:flex items-center gap-6">
-            <Phone className="w-5 h-5" />
-            <div className="flex flex-col text-xs">
-              <a
-                href="tel:07936450711"
-                className="text-white hover:text-[#1E97D4] transition-colors font-semibold text-sm"
-              >
-                07936 450711
-              </a>
-              <a
-                href="tel:07791746045"
-                className="text-white hover:text-[#1E97D4] transition-colors font-semibold text-sm"
-              >
-                07791 746045
-              </a>
-            </div>
-
+          {/* Right Section - Phone & CTA */}
+          <div className="absolute right-0 hidden md:flex items-center gap-6">
+            <a
+              href="tel:07936450711"
+              className="flex items-center gap-2 text-white hover:text-[#1E97D4] transition-colors group"
+            >
+              <Phone className="w-4 h-4 text-[#1E97D4]" />
+              <span className="text-sm font-semibold">07936 450711</span>
+            </a>
+            <div className="w-px h-6 bg-white/20"></div>
             <Link
               href="/contact"
-              className="bg-[#1E97D4] hover:bg-[#0d7ab8] text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 whitespace-nowrap"
+              className="bg-[#1E97D4] hover:bg-[#0d7ab8] text-white font-semibold py-2 px-7 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm whitespace-nowrap"
             >
               Get Quote
             </Link>
           </div>
 
+          {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-3 rounded-lg hover:bg-white/10 transition-colors"
+            className="lg:hidden p-2 rounded-lg hover:bg-white/10 transition-colors absolute right-0"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -100,47 +90,33 @@ export default function Header() {
           </button>
         </div>
 
+        {/* Mobile Menu */}
         <div
           className={cn(
             "lg:hidden overflow-hidden transition-all duration-300 ease-in-out",
-            isMenuOpen ? "max-h-96 mt-4" : "max-h-0",
+            isMenuOpen ? "max-h-80 mt-4" : "max-h-0",
           )}
         >
-          <div className="flex flex-col gap-2 py-6 border-t border-white/20">
+          <div className="flex flex-col gap-3 py-4 border-t border-white/20">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-gray-300 hover:text-[#1E97D4] transition-colors font-semibold py-3 text-base px-4"
+                className="text-gray-300 hover:text-[#1E97D4] transition-colors font-semibold py-2 px-4"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
-            <div className="ml-4 flex items-center gap-2">
-              <Phone className="w-5 h-5" />
-              <div className="flex flex-col text-xs">
-                <a
-                  href="tel:07936450711"
-                  className="text-white hover:text-[#1E97D4] transition-colors font-semibold text-sm"
-                >
-                  07936 450711
-                </a>
-                <a
-                  href="tel:07791746045"
-                  className="text-white hover:text-[#1E97D4] transition-colors font-semibold text-sm"
-                >
-                  07791 746045
-                </a>
-              </div>
+            <div className="border-t border-white/20 my-2 pt-2">
+              <a
+                href="tel:07936450711"
+                className="flex items-center gap-2 text-white hover:text-[#1E97D4] transition-colors py-2 px-4 font-semibold"
+              >
+                <Phone className="w-4 h-4 text-[#1E97D4]" />
+                <span className="text-sm">07936 450711</span>
+              </a>
             </div>
-            <Link
-              href="/contact"
-              className="bg-[#1E97D4] hover:bg-[#0d7ab8] text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 text-center mx-4 mt-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Get Quote
-            </Link>
           </div>
         </div>
       </nav>

@@ -19,33 +19,30 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative bg-[#292929] text-white overflow-hidden py-20 md:py-28 -mt-16">
+    <section className="relative bg-[#292929] text-white overflow-hidden py-12 sm:py-16 md:py-20 lg:py-28 -mt-40">
       <div className="absolute inset-0">
         <Image
           src="/images/roof1.jpg"
           alt="Professional roofing work"
           fill
-          className="object-cover opacity-10"
+          className="object-cover opacity-20"
           style={{ transform: `translateY(${scrollY * 0.3}px)` }}
           priority
         />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-br from-[#292929]/90 via-[#292929]/85 to-[#292929]/80"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#292929]/80 via-[#292929]/85 to-[#292929]/90"></div>
 
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="relative w-[600px] h-[600px] opacity-5">
-          <Image
-            src="/tl-logo.png"
-            alt="T & L Roofing Logo"
-            fill
-            className="object-contain"
-            priority
-          />
-        </div>
-      </div>
-
-      <div className="container relative z-10">
+      <div className="container relative z-10 px-4 sm:px-6">
         <div className="flex flex-col items-center">
+          <div className="relative w-[200px] h-[200px] sm:w-[280px] sm:h-[280px] md:w-[350px] md:h-[350px] mx-auto -mb-8 sm:-mb-12 md:-mb-20">
+            <Image
+              src="/tl-logo.png"
+              alt="T & L Roofing Logo"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-center max-w-5xl">
             Professional{" "}
             <span className="text-[#1E97D4]">Roofing Services</span> You Can
