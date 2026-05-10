@@ -11,7 +11,6 @@ import {
   House,
   Hammer,
   Droplets,
-  ClipboardCheck,
   AlertTriangle,
   ArrowRight,
   CheckCircle,
@@ -57,13 +56,6 @@ export default function Home() {
         "Installation, repair, and cleaning of gutters and downpipes. Keep your drainage system flowing properly.",
       icon: <Droplets className="w-8 h-8" />,
       href: "/services#gutters",
-    },
-    {
-      title: "Roof Inspections",
-      description:
-        "Comprehensive roof assessments and detailed reports. Identify issues before they become major problems.",
-      icon: <ClipboardCheck className="w-8 h-8" />,
-      href: "/services#inspections",
     },
     {
       title: "Emergency Repairs",

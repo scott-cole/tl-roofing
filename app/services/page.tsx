@@ -4,7 +4,6 @@ import {
   House,
   Hammer,
   Droplets,
-  ClipboardCheck,
   AlertTriangle,
   CheckCircle2,
 } from "lucide-react";
@@ -12,9 +11,9 @@ import {
 export const metadata: Metadata = {
   title: "Roofing Services in Leeds & West Yorkshire | T & L Roofing",
   description:
-    "Complete roofing services in Leeds and West Yorkshire. Expert roof repairs, replacements, installations, gutters, inspections, and 24/7 emergency services.",
+    "Complete roofing services in Leeds and West Yorkshire. Expert roof repairs, replacements, installations, gutters, and 24/7 emergency services.",
   keywords:
-    "roofing services Leeds, roof repairs, roof replacement, roof installation, gutter services, roof inspections, emergency roofing",
+    "roofing services Leeds, roof repairs, roof replacement, roof installation, gutter services, emergency roofing",
   alternates: {
     canonical: "https://tl-roofing.co.uk/services",
   },
@@ -80,21 +79,6 @@ export default function ServicesPage() {
         "Downpipe installation",
         "Gutter guards and leaf protection",
         "Water damage prevention",
-      ],
-    },
-    {
-      id: "inspections",
-      title: "Roof Inspections",
-      icon: <ClipboardCheck className="w-12 h-12" />,
-      description:
-        "Thorough roof inspections to identify potential issues before they become major problems. Essential for property purchases, insurance claims, and routine maintenance.",
-      features: [
-        "Comprehensive roof assessments",
-        "Detailed inspection reports",
-        "Photo documentation",
-        "Insurance claim support",
-        "Pre-purchase inspections",
-        "Maintenance recommendations",
       ],
     },
     {
