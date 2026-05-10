@@ -33,9 +33,9 @@ export default function Header() {
       )}
     >
       <nav className="mx-auto px-3 sm:px-4 lg:px-6 max-w-[1400px] py-4">
-        <div className="flex items-center justify-center relative">
+        <div className="flex items-center justify-between relative">
           {/* Logo/Branding - Left */}
-          <div className="absolute left-0">
+          <div>
             <Link href="/" className="flex items-center shrink-0 group">
               <span className="text-2xl font-bold text-[#1E97D4] tracking-tight">
                 T&L
@@ -45,7 +45,7 @@ export default function Header() {
           </div>
 
           {/* Center Navigation */}
-          <div className="hidden lg:flex items-center gap-10">
+          <div className="hidden lg:flex items-center gap-10 flex-1 justify-center">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -59,7 +59,7 @@ export default function Header() {
           </div>
 
           {/* Right Section - Phone & CTA */}
-          <div className="absolute right-0 hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-6">
             <a
               href="tel:07936450711"
               className="flex items-center gap-2 text-white hover:text-[#1E97D4] transition-colors group"
@@ -78,7 +78,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 rounded-lg hover:bg-white/10 transition-colors absolute right-0"
+            className="lg:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -90,35 +90,39 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
-        <div
-          className={cn(
-            "lg:hidden overflow-hidden transition-all duration-300 ease-in-out",
-            isMenuOpen ? "max-h-80 mt-4" : "max-h-0",
-          )}
-        >
-          <div className="flex flex-col gap-3 py-4 border-t border-white/20">
-            {navLinks.map((link) => (
+        {/* Mobile Menu - Full Screen */}
+        {isMenuOpen && (
+          <div className="lg:hidden fixed inset-0 top-[73px] bg-[#292929] z-40 flex flex-col">
+            <div className="flex flex-col gap-6 py-8 px-6 flex-1">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-gray-300 hover:text-[#1E97D4] transition-colors font-semibold text-lg py-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <div className="border-t border-white/20 my-2 pt-6">
+                <a
+                  href="tel:07936450711"
+                  className="flex items-center gap-3 text-white hover:text-[#1E97D4] transition-colors py-3 font-semibold text-lg"
+                >
+                  <Phone className="w-5 h-5 text-[#1E97D4]" />
+                  <span>07936 450711</span>
+                </a>
+              </div>
               <Link
-                key={link.href}
-                href={link.href}
-                className="text-gray-300 hover:text-[#1E97D4] transition-colors font-semibold py-2 px-4"
+                href="/contact"
+                className="bg-[#1E97D4] hover:bg-[#0d7ab8] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 text-center text-lg mt-4"
                 onClick={() => setIsMenuOpen(false)}
               >
-                {link.label}
+                Get Quote
               </Link>
-            ))}
-            <div className="border-t border-white/20 my-2 pt-2">
-              <a
-                href="tel:07936450711"
-                className="flex items-center gap-2 text-white hover:text-[#1E97D4] transition-colors py-2 px-4 font-semibold"
-              >
-                <Phone className="w-4 h-4 text-[#1E97D4]" />
-                <span className="text-sm">07936 450711</span>
-              </a>
             </div>
           </div>
-        </div>
+        )}
       </nav>
     </header>
   );

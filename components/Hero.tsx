@@ -19,7 +19,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative bg-[#292929] text-white overflow-hidden py-12 sm:py-16 md:py-20 lg:py-28 -mt-40">
+    <section className="relative bg-[#292929] text-white overflow-hidden py-12 sm:py-16 md:py-20 lg:py-28 -mt-20 sm:-mt-32 md:-mt-40">
       <div className="absolute inset-0">
         <Image
           src="/images/roof1.jpg"
