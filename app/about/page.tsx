@@ -76,16 +76,16 @@ export default function AboutPage() {
               </h2>
               <p className="text-gray-400 mb-6 text-xl leading-relaxed">
                 T &amp; L Roofing has been serving the Leeds and West Yorkshire
-                community for over 15 years. What started as a small family
-                business has grown into one of the region&rsquo;s most trusted roofing
-                companies, built on a foundation of quality workmanship and
-                exceptional customer service.
+                community for over 15 years. What started as a small business
+                that has now has grown into one of the region&rsquo;s most
+                trusted roofing companies, built on a foundation of quality
+                workmanship and exceptional customer service.
               </p>
               <p className="text-gray-400 mb-6 text-xl leading-relaxed">
                 We understand that your roof is one of the most important
-                investments in your home. That&rsquo;s why we approach every project
-                with the same care and attention to detail that we would want
-                for our own properties. From minor repairs to complete
+                investments in your home. That&rsquo;s why we approach every
+                project with the same care and attention to detail that we would
+                want for our own properties. From minor repairs to complete
                 replacements, we treat each job with the utmost professionalism
                 and dedication.
               </p>
@@ -94,8 +94,8 @@ export default function AboutPage() {
                 craftsmanship with modern techniques and materials to deliver
                 results that stand the test of time. We stay up-to-date with
                 industry best practices and continuously invest in training to
-                ensure we&rsquo;re always providing the best possible service to our
-                customers.
+                ensure we&rsquo;re always providing the best possible service to
+                our customers.
               </p>
             </div>
 
@@ -218,8 +218,9 @@ export default function AboutPage() {
         <div className="container">
           <h2 className="text-4xl font-bold mb-6">Ready to Work With Us?</h2>
           <p className="text-xl mb-8 text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            Contact T &amp; L Roofing today to discuss your project. We&rsquo;re here to
-            help with all your roofing needs in Leeds and West Yorkshire.
+            Contact T &amp; L Roofing today to discuss your project. We&rsquo;re
+            here to help with all your roofing needs in Leeds and West
+            Yorkshire.
           </p>
           <a href="/contact" className="btn-primary inline-block">
             Get in Touch
