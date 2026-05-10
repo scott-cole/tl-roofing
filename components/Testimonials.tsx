@@ -26,7 +26,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-24 bg-[#404040]">
+    <section className="py-24 bg-[#333333]">
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">
@@ -37,20 +37,20 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-24">
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="bg-[#404040] rounded-2xl shadow-lg p-10 relative card-hover border border-[#4a4a4a]"
+              className="bg-[#404040] rounded-2xl shadow-lg p-12 relative card-hover border border-[#4a4a4a]"
             >
-              <Quote className="absolute top-8 right-8 w-12 h-12 text-[#1E97D4]/20" />
-              <div className="flex items-center space-x-1 mb-6">
+              <Quote className="absolute top-10 right-10 w-14 h-14 text-[#1E97D4]/20" />
+              <div className="flex items-center space-x-1 mb-8">
                 {[...Array(review.rating)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-[#1E97D4] text-[#1E97D4]" />
                 ))}
               </div>
-              <p className="text-gray-300 mb-8 italic leading-relaxed text-lg">"{review.text}"</p>
-              <div className="flex items-center justify-between pt-6 border-t border-[#4a4a4a]">
+              <p className="text-gray-300 mb-10 italic leading-relaxed text-lg">"{review.text}"</p>
+              <div className="flex items-center justify-between pt-8 border-t border-[#4a4a4a]">
                 <div>
                   <p className="font-bold text-white text-lg">{review.name}</p>
                   <p className="text-sm text-gray-400">{review.location}</p>
@@ -61,30 +61,30 @@ export default function Testimonials() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <div className="bg-[#404040] rounded-2xl shadow-lg p-12 text-center card-hover border-2 border-[#1E97D4]">
-            <div className="text-7xl mb-8">⭐</div>
-            <h3 className="text-3xl font-bold text-white mb-4">5-Star Rated</h3>
-            <p className="text-gray-400 mb-8 text-lg leading-relaxed">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <div className="bg-[#404040] rounded-2xl shadow-lg p-16 text-center card-hover border-2 border-[#1E97D4]">
+            <div className="text-8xl mb-10">⭐</div>
+            <h3 className="text-4xl font-bold text-white mb-6">5-Star Rated</h3>
+            <p className="text-gray-400 mb-10 text-xl leading-relaxed">
               Highly rated roofing company in Leeds on Google Reviews
             </p>
-            <div className="flex items-center justify-center space-x-1 mb-4">
+            <div className="flex items-center justify-center space-x-1 mb-6">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-8 h-8 fill-[#1E97D4] text-[#1E97D4]" />
+                <Star key={i} className="w-9 h-9 fill-[#1E97D4] text-[#1E97D4]" />
               ))}
             </div>
             <p className="text-sm text-gray-500">Based on customer reviews</p>
           </div>
 
-          <div className="bg-[#404040] rounded-2xl shadow-lg p-12 text-center card-hover border-2 border-[#1E97D4]">
-            <div className="text-7xl mb-8">✓</div>
-            <h3 className="text-3xl font-bold text-white mb-4">Excellent</h3>
-            <p className="text-gray-400 mb-8 text-lg leading-relaxed">
+          <div className="bg-[#404040] rounded-2xl shadow-lg p-16 text-center card-hover border-2 border-[#1E97D4]">
+            <div className="text-8xl mb-10">✓</div>
+            <h3 className="text-4xl font-bold text-white mb-6">Excellent</h3>
+            <p className="text-gray-400 mb-10 text-xl leading-relaxed">
               Top-rated on Trustpilot for roofing services in West Yorkshire
             </p>
-            <div className="flex items-center justify-center space-x-1 mb-4">
+            <div className="flex items-center justify-center space-x-1 mb-6">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-8 h-8 fill-[#1E97D4] text-[#1E97D4]" />
+                <Star key={i} className="w-9 h-9 fill-[#1E97D4] text-[#1E97D4]" />
               ))}
             </div>
             <p className="text-sm text-gray-500">Trustpilot Excellent Rating</p>
