@@ -97,7 +97,7 @@ export default function Home() {
     <>
       <Hero />
 
-      <section className="py-20 md:py-28 bg-[#292929]">
+      <section className="py-20 md:py-28 bg-[#292929] pt-12 md:pt-20">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">Our Roofing Services</h2>
@@ -160,7 +160,7 @@ export default function Home() {
         limit={6}
       />
 
-      <div className="text-center bg-[#333333] py-16">
+      <div className="text-center bg-[#333333] py-20 md:py-28">
         <Link
           href="/gallery"
           className="btn-primary inline-flex items-center gap-2"

@@ -19,7 +19,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative bg-[#292929] text-white overflow-hidden py-12 sm:py-16 md:py-20 lg:py-28 -mt-20 sm:-mt-32 md:-mt-40">
+    <section className="relative bg-[#292929] text-white overflow-hidden pb-8 sm:pb-12 md:pb-16 lg:pb-20 pt-20 sm:pt-24 md:pt-28 lg:pt-36 -mt-20 sm:-mt-32 md:-mt-40">
       <div className="absolute inset-0">
         <Image
           src="/images/roof1.jpg"
@@ -104,7 +104,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce">
           <a
             href="#services"
             className="text-[#1E97D4] hover:text-white transition-colors"

@@ -106,20 +106,26 @@ export default function Footer() {
                   United Kingdom
                 </span>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-[#1E97D4] flex-shrink-0" />
-                <a
-                  href="tel:07936450711"
-                  className="text-gray-400 hover:text-[#1E97D4] transition-colors font-medium"
-                >
-                  07936 450711
-                </a>
-                <a
-                  href="tel:07791746045"
-                  className="text-gray-400 hover:text-[#1E97D4] transition-colors font-medium"
-                >
-                  07791 746045
-                </a>
+              <li>
+                <div className="flex flex-col gap-2">
+                  <div className="flex items-center gap-3">
+                    <Phone className="w-5 h-5 text-[#1E97D4] flex-shrink-0" />
+                    <a
+                      href="tel:07936450711"
+                      className="text-gray-400 hover:text-[#1E97D4] transition-colors font-medium"
+                    >
+                      07936 450711
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-3 pl-8">
+                    <a
+                      href="tel:07791746045"
+                      className="text-gray-400 hover:text-[#1E97D4] transition-colors font-medium"
+                    >
+                      07791 746045
+                    </a>
+                  </div>
+                </div>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-[#1E97D4] flex-shrink-0" />

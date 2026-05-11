@@ -64,9 +64,6 @@
   @apply border-2 border-[#1E97D4] text-[#1E97D4] hover:bg-[#1E97D4] hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200;
 }
 
-section {
-  @apply py-24 md:py-32;
-}
 
 .container {
   @apply mx-auto px-8 sm:px-10 lg:px-20 max-w-[1400px];
@@ -81,15 +78,15 @@ section {
 }
 
 .section-header {
-  @apply text-center mb-24;
+  @apply text-center mb-16;
 }
 
 .section-title {
-  @apply text-4xl md:text-5xl font-bold text-white mb-8;
+  @apply text-3xl md:text-5xl font-bold text-white mb-6;
 }
 
 .section-subtitle {
-  @apply text-xl text-gray-400 max-w-3xl mx-auto;
+  @apply text-lg md:text-xl text-gray-400 max-w-3xl mx-auto;
 }
 
 /* Scroll Reveal Animations */
