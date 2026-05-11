@@ -1,5 +1,7 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
+Allow: /
+
+User-agent: facebookexternalhit
 Allow: /
 
 Sitemap: https://tl-roofing.co.uk/sitemap.xml
