@@ -26,10 +26,10 @@ export default function ServicesPage() {
       title: "Roof Repairs",
       icon: <Wrench className="w-12 h-12" />,
       description:
-        "Professional roof repair services for all types of roofing issues. From fixing leaks and replacing damaged shingles to addressing structural problems, our experienced team ensures your roof is in top condition.",
+        "Professional roof repair services for all types of roofing issues. From fixing leaks and replacing damaged tiles to addressing structural problems, our experienced team ensures your roof is in top condition.",
       features: [
         "Leak detection and repair",
-        "Shingle replacement",
+        "Tile and slate repairs",
         "Flashings repair",
         "Chimney and vent repair",
         "Storm damage repair",

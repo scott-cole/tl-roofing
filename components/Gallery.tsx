@@ -76,7 +76,7 @@ export default function Gallery({
                 >
                   <Image
                     src={src}
-                    alt={`Roofing project ${index + 1}`}
+                    alt={`Completed roofing project ${index + 1} in Leeds and West Yorkshire`}
                     fill
                     className="object-cover transition-all duration-700 group-hover:scale-110"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -107,7 +107,7 @@ export default function Gallery({
             <div className="relative w-full h-full max-w-[95vw] max-h-[80vh]">
               <Image
                 src={images[selectedIndex]}
-                alt={`Roofing project ${selectedIndex + 1}`}
+                alt={`Roofing project gallery image ${selectedIndex + 1} - T & L Roofing Leeds`}
                 fill
                 className="object-contain"
                 priority

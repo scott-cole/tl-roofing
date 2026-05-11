@@ -32,7 +32,7 @@ export default function Home() {
     {
       title: "Roof Repairs",
       description:
-        "Expert repairs for leaks, damaged shingles, and minor roof issues. Fast, reliable service to protect your home.",
+        "Expert repairs for leaks, damaged tiles, and minor roof issues. Fast, reliable service to protect your home.",
       icon: <Wrench className="w-8 h-8" />,
       href: "/services#repairs",
     },

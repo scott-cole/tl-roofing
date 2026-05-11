@@ -56,6 +56,7 @@ export const metadata: Metadata = {
       "Expert roofing services in Leeds and West Yorkshire. Professional roof repairs, replacements, installations, and emergency services.",
     images: ["/tl-logo-favicon.png"],
     creator: "@tlroofing",
+    site: "@tlroofing",
   },
   robots: {
     index: true,
@@ -90,6 +91,7 @@ export default function RootLayout({
     >
       <head>
         <meta name="theme-color" content="#292929" />
+        <meta name="referrer" content="origin-when-cross-origin" />
       </head>
       <body className="min-h-screen flex flex-col">
         <SchemaMarkup />

@@ -13,7 +13,7 @@ export default function ReviewSchema() {
         "@type": "Review",
         author: {
           "@type": "Person",
-          name: "Sarah Thompson",
+          name: "michelle31989",
         },
         reviewRating: {
           "@type": "Rating",
@@ -22,14 +22,14 @@ export default function ReviewSchema() {
           worstRating: "1",
         },
         reviewBody:
-          "Excellent work from T & L Roofing! They replaced our roof quickly and professionally. The team was polite and left everything tidy. Highly recommend!",
-        datePublished: "2024-01-15",
+          "Brilliant work, great communication and workmanship. Guys were helpful and worked around other trades really well.",
+        datePublished: "2024-11-01",
       },
       {
         "@type": "Review",
         author: {
           "@type": "Person",
-          name: "James Wilson",
+          name: "deadlyden",
         },
         reviewRating: {
           "@type": "Rating",
@@ -38,14 +38,14 @@ export default function ReviewSchema() {
           worstRating: "1",
         },
         reviewBody:
-          "Had an emergency roof leak and T & L Roofing came out the same day. Fixed the problem efficiently at a fair price. Very grateful for their quick response!",
-        datePublished: "2023-12-20",
+          "We would highly recommend TL Roofing Services. Completed the job fully in inclement weather conditions to our full satisfaction.",
+        datePublished: "2024-10-15",
       },
       {
         "@type": "Review",
         author: {
           "@type": "Person",
-          name: "Emma Davis",
+          name: "tania31720",
         },
         reviewRating: {
           "@type": "Rating",
@@ -54,8 +54,24 @@ export default function ReviewSchema() {
           worstRating: "1",
         },
         reviewBody:
-          "Professional service from start to finish. The team explained everything clearly and did a fantastic job on our new roof installation. Will definitely use again.",
-        datePublished: "2024-01-05",
+          "Very pleased with the service and care that we received. Fair quotes with clear understanding of every step. Professional approach and high standards of workmanship.",
+        datePublished: "2024-09-20",
+      },
+      {
+        "@type": "Review",
+        author: {
+          "@type": "Person",
+          name: "biggles_18",
+        },
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+          worstRating: "1",
+        },
+        reviewBody:
+          "Tom was quick to respond and arrived to quote when he said he would. The new fibreglass roofs look much better than the old ones. Very happy with the result.",
+        datePublished: "2024-08-05",
       },
     ],
   };
