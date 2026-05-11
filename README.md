@@ -6,7 +6,6 @@ Professional roofing services in Leeds and West Yorkshire.
 
 - [Next.js](https://nextjs.org/) — React framework with App Router
 - [Tailwind CSS v4](https://tailwindcss.com/) — utility-first styling
-- [Nodemailer](https://nodemailer.com/) — contact form email delivery via Outlook SMTP
 - [Lucide](https://lucide.dev/) — icon library
 - Hosted on [Vercel](https://vercel.com/)
 
@@ -21,19 +20,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Environment Variables
 
-Copy `.env.example` to `.env.local` and fill in your SMTP credentials:
-
-```bash
-cp .env.example .env.local
-```
-
-| Variable | Description |
-|----------|-------------|
-| `SMTP_HOST` | SMTP server (e.g. `smtp.office365.com`) |
-| `SMTP_PORT` | SMTP port (e.g. `587`) |
-| `SMTP_EMAIL` | Sender email address |
-| `SMTP_PASSWORD` | App password (not your regular password) |
-| `CONTACT_EMAIL` | Where contact form submissions are sent |
+No environment variables are required. The contact page uses `mailto:` links to open the user's email client.
 
 ## Build
 
