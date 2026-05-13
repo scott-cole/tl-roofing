@@ -41,10 +41,10 @@ export const metadata: Metadata = {
     siteName: "TL Roofing",
     images: [
       {
-        url: "/tl-logo-favicon.png",
-        width: 1000,
-        height: 1000,
-        alt: "TL Roofing Logo",
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "TL Roofing - Professional Roofing Services in Leeds & West Yorkshire",
       },
     ],
   },
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
       "TL Roofing | Professional Roofing Services in Leeds & West Yorkshire",
     description:
       "Expert roofing services in Leeds and West Yorkshire. Professional roof repairs, replacements, installations, and emergency services.",
-    images: ["/tl-logo-favicon.png"],
+    images: ["/og-image.png"],
     creator: "@tlroofing",
     site: "@tlroofing",
   },

@@ -42,7 +42,7 @@ export default function SchemaMarkup() {
       },
     ],
     priceRange: "££",
-    image: "https://tl-roofing.co.uk/tl-logo.png",
+    image: "https://tl-roofing.co.uk/og-image.png",
     sameAs: [
       "https://www.facebook.com/TLROOFINGSERVICES",
     ],
