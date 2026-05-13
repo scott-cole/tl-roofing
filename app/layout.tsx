@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "your-google-verification-code",
+    google: "f3df4822ca66c157",
   },
   icons: {
     icon: "/tl-logo-favicon.png",
