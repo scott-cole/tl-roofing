@@ -4,7 +4,6 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SchemaMarkup from "@/components/SchemaMarkup";
-import ReviewSchema from "@/components/ReviewSchema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Analytics } from "@vercel/analytics/react";
@@ -95,7 +94,6 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col">
         <SchemaMarkup />
-        <ReviewSchema />
         <BreadcrumbSchema
           items={[{ name: "Home", url: "https://tl-roofing.co.uk" }]}
         />
